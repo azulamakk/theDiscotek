@@ -41,7 +41,8 @@ cantUnidadesUsadas = parseInt(prompt("¿Cuantos componentes ha utilizado?"))
 //Registro de unidades en caso de re-stock. Control a cargo del empleado de turno.
 let cantUnidadesIngresadas = parseInt(prompt("¿Cuantas unidades se han ingresado al warehouse?"))
 
-let articulo
+//Idealmente en un futuro, existiria una lista de codigos de articulos cargados
+let articulo=1020
 function cantArticulosTotal(articuloIngresado) {
     while (articuloIngresado==articulo){
         totalUnidades = totalUnidades - cantUnidadesUsadas
@@ -58,4 +59,5 @@ function cantArticulosTotal(articuloIngresado) {
         }
     }
 }
+console.log("Actualmente hay "+totalUnidades+" unidades disponibles de articulo "+articulo);
 
