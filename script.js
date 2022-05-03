@@ -33,8 +33,29 @@ console.log("Usuario activo: "+usuarioEmpleado)
 console.log("Ultima vez consultado: "+new Date().toLocaleTimeString())
 
 //Control de inventarios
-let articulo, cantUnidades, totalUnidades
-articulo = parseInt(prompt("Ingrese el codigo de articulo que utilizó en su turno"))
-cantUnidades = parseInt(prompt("¿Cuantos componentes ha utilizado?"))
+let articuloIngresado, cantUnidadesUsadas, totalUnidades
+articuloIngresado = parseInt(prompt("Ingrese el codigo de articulo que utilizó en su turno"))
+cantUnidadesUsadas = parseInt(prompt("¿Cuantos componentes ha utilizado?"))
 
-totalUnidades = totalUnidades - cantUnidades
+//Ingreso de unidades
+//Registro de unidades en caso de re-stock. Control a cargo del empleado de turno.
+let cantUnidadesIngresadas = parseInt(prompt("¿Cuantas unidades se han ingresado al warehouse?"))
+
+let articulo
+function cantArticulosTotal(articuloIngresado) {
+    while (articuloIngresado==articulo){
+        totalUnidades = totalUnidades - cantUnidadesUsadas
+        totalUnidades = totalUnidades + cantUnidadesIngresadas
+        return totalUnidades
+    }
+    for (i=1;i=5;i++){
+        if (articuloIngresado!=articulo){
+            alert("El codigo de articulo ingresado no coincide con el inventario. Intente de nuevo por favor")
+            articuloIngresado = prompt("Codigo articulo buscado")
+        }
+        if(i>4){
+            alert("Se recomienda revisar los manuales de codigos de producto. Intente mas tarde")
+        }
+    }
+}
+
