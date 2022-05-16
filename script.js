@@ -90,7 +90,7 @@ function cantArticulosTotal(articuloIngresado) {
     }
 }
 console.log("Actualmente hay "+totalUnidades+" unidades disponibles de articulo "+articulo);
-let nombreArt
+let nombreArt, porcentajeInflacionMes
 
 class inventarioTotal {
     constructor(id, nombre, precio) {
@@ -99,9 +99,14 @@ class inventarioTotal {
         this.disponible = true;
         this.cantStock = parseInt(totalUnidades);
     }
+    actualizacionInflacion(){
+        this.precio = this.precio * (1+porcentajeInflacionMes)
+    }
 }
 const inventarios = [];
 inventarios.push(new inventarioTotal("1010", "Valvula Rosca", 45));
 inventarios.push(new inventarioTotal("1020", "Valvula Presion", 80));
 inventarios.push(new inventarioTotal("3030", "Cierre hidraulico", 200));
 
+for (const inventario of inventarios)
+    inventario.actualizacionInflacion();
