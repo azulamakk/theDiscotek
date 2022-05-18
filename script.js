@@ -26,6 +26,7 @@ for (const inventario of inventarios) (
 // Declaracion de empleados
 let nombreEmpleado, apellidoEmpleado, fecnacEmpleado, usuarioEmpleado, contrasenaEmpleado;
 let horarioLlegada, diaTrabajado, anioIngresoEmpleado
+
 //const empleados = []
 const empleados = [{
         nombre: "Jorge",
@@ -55,27 +56,10 @@ const empleados = [{
         contrasena: "Canelones"
     }
 ]
-
-// Usuarios conectados
-console.log("Usuario activo: " + usuarioEmpleado)
-console.log("Ultima vez consultado: " + new Date().toLocaleTimeString())
-
-//Control de inventarios
-let articuloIngresado, cantUnidadesUsadas, totalUnidades
-articuloIngresado = parseInt(prompt("Ingrese el codigo de articulo que utilizó en su turno"))
-cantUnidadesUsadas = parseInt(prompt("¿Cuantos componentes ha utilizado?"))
-
-//Ingreso de unidades
-//Registro de unidades en caso de re-stock. Control a cargo del empleado de turno.
-let cantUnidadesIngresadas = parseInt(prompt("¿Cuantas unidades se han ingresado al warehouse?"))
-
-//Idealmente en un futuro, existiria una lista de codigos de articulos cargados
-let articulo = inventarios
-
-function cantArticulosTotal(articuloIngresado) {
-    //Carga de datos - Conversion a str
-    usuarioIngresado = prompt("¿Cual es su nombre de usuario?");
-    contrasenaIngresado = prompt("Ingrese su contraseña")
+//Carga de datos - Conversion a str
+let usuarioIngresado = prompt("¿Cual es su nombre de usuario?");
+let contrasenaIngresado = prompt("Ingrese su contraseña");
+function ingresoDeUsuario(usuarioIngresado, contrasenaIngresado) {
     let edadUsuario
     for (let m = 1; m = 3; i++) {
         let posicionEnObjeto
@@ -96,6 +80,24 @@ function cantArticulosTotal(articuloIngresado) {
             }
         }
     }
+}
+// Usuarios conectados
+console.log("Usuario activo: " + usuarioEmpleado)
+console.log("Ultima vez consultado: " + new Date().toLocaleTimeString())
+
+//Control de inventarios
+let articuloIngresado, cantUnidadesUsadas, totalUnidades
+articuloIngresado = parseInt(prompt("Ingrese el codigo de articulo que utilizó en su turno"))
+cantUnidadesUsadas = parseInt(prompt("¿Cuantos componentes ha utilizado?"))
+
+//Ingreso de unidades
+//Registro de unidades en caso de re-stock. Control a cargo del empleado de turno.
+let cantUnidadesIngresadas = parseInt(prompt("¿Cuantas unidades se han ingresado al warehouse?"))
+
+//Idealmente en un futuro, existiria una lista de codigos de articulos cargados
+let articulo = inventarios
+
+function cantArticulosTotal(articuloIngresado) {
     console.log("La edad del usuario es: " + edadUsuario);
     while (articuloIngresado == articulo) {
         totalUnidades = totalUnidades - cantUnidadesUsadas
