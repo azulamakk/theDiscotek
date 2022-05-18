@@ -1,6 +1,29 @@
 // La intecion de este proyecto es la creacion de un sistema de control de inventarios y turnos de empleados.
 // Su objetivo principal es que un empleado al ingresar al turno sea registrado y mas adelante se puedan registar las materias primas utilizadas
 
+// Declaracion de articulos
+console.log("Actualmente hay " + totalUnidades + " unidades disponibles de articulo " + articulo);
+let nombreArt, porcentajeInflacionMes
+class inventarioTotal {
+    constructor(id, nombre, precio) {
+        this.id = parseInt(articulo);
+        this.nombre = nombreArt.toUpperCase();
+        this.disponible = true;
+        this.cantStock = parseInt(totalUnidades);
+    }
+    actualizacionInflacion() {
+        this.precio = this.precio * (1 + porcentajeInflacionMes)
+    }
+}
+const inventarios = [];
+inventarios.push(new inventarioTotal("1010", "Valvula Rosca", 45));
+inventarios.push(new inventarioTotal("1020", "Valvula Presion", 80));
+inventarios.push(new inventarioTotal("3030", "Cierre hidraulico", 200));
+
+for (const inventario of inventarios) (
+    inventario.actualizacionInflacion()
+)
+// Declaracion de empleados
 let nombreEmpleado, apellidoEmpleado, fecnacEmpleado, usuarioEmpleado, contrasenaEmpleado;
 let horarioLlegada, diaTrabajado, anioIngresoEmpleado
 //const empleados = []
@@ -32,30 +55,6 @@ const empleados = [{
         contrasena: "Canelones"
     }
 ]
-//Carga de datos - Conversion a str
-usuarioIngresado = prompt("¿Cual es su nombre de usuario?");
-contrasenaIngresado = prompt("Ingrese su contraseña")
-let edadUsuario
-for (let m = 1; m = 3; i++) {
-    let posicionEnObjeto
-    posicionEnObjeto = empleados.indexOf(usuario = usuarioEmpleado)
-    contrasenaEmpleado = empleados[posicionEnObjeto].contrasena
-    edadUsuario = 2022 - empleados[posicionEnObjeto].anioNacimiento
-    for (let i = 1; i = 3; i++) {
-        if ((i = 1) && (contrasenaEmpleado != contrasenaIngresado)) {
-            contrasenaIngresado = prompt("La contraseña ingresada es incorrecta. Por favor ingresela nuevamente")
-        }
-        if (contrasenaEmpleado = contrasenaIngresado) {
-            alert("Usuario y contraseña son correctos. Enhorabuena! Usted ha iniciado sesión")
-            break;
-        }
-        if ((i = 3) && (contrasenaEmpleado != contrasenaIngresado)) {
-            alert("Ups! Ya ingresado 3 intentos insatisfactorios. Por favor contactese con el administrados para reestablecer su contraseña")
-            break;
-        }
-    }
-}
-console.log("La edad del usuario es: " + edadUsuario);
 
 // Usuarios conectados
 console.log("Usuario activo: " + usuarioEmpleado)
@@ -74,6 +73,30 @@ let cantUnidadesIngresadas = parseInt(prompt("¿Cuantas unidades se han ingresad
 let articulo = inventarios
 
 function cantArticulosTotal(articuloIngresado) {
+    //Carga de datos - Conversion a str
+    usuarioIngresado = prompt("¿Cual es su nombre de usuario?");
+    contrasenaIngresado = prompt("Ingrese su contraseña")
+    let edadUsuario
+    for (let m = 1; m = 3; i++) {
+        let posicionEnObjeto
+        posicionEnObjeto = empleados.indexOf(usuario = usuarioEmpleado)
+        contrasenaEmpleado = empleados[posicionEnObjeto].contrasena
+        edadUsuario = 2022 - empleados[posicionEnObjeto].anioNacimiento
+        for (let i = 1; i = 3; i++) {
+            if ((i = 1) && (contrasenaEmpleado != contrasenaIngresado)) {
+                contrasenaIngresado = prompt("La contraseña ingresada es incorrecta. Por favor ingresela nuevamente")
+            }
+            if (contrasenaEmpleado = contrasenaIngresado) {
+                alert("Usuario y contraseña son correctos. Enhorabuena! Usted ha iniciado sesión")
+                break;
+            }
+            if ((i = 3) && (contrasenaEmpleado != contrasenaIngresado)) {
+                alert("Ups! Ya ingresado 3 intentos insatisfactorios. Por favor contactese con el administrados para reestablecer su contraseña")
+                break;
+            }
+        }
+    }
+    console.log("La edad del usuario es: " + edadUsuario);
     while (articuloIngresado == articulo) {
         totalUnidades = totalUnidades - cantUnidadesUsadas
         totalUnidades = totalUnidades + cantUnidadesIngresadas
@@ -89,23 +112,3 @@ function cantArticulosTotal(articuloIngresado) {
         }
     }
 }
-console.log("Actualmente hay " + totalUnidades + " unidades disponibles de articulo " + articulo);
-let nombreArt, porcentajeInflacionMes
-class inventarioTotal {
-    constructor(id, nombre, precio) {
-        this.id = parseInt(articulo);
-        this.nombre = nombreArt.toUpperCase();
-        this.disponible = true;
-        this.cantStock = parseInt(totalUnidades);
-    }
-    actualizacionInflacion() {
-        this.precio = this.precio * (1 + porcentajeInflacionMes)
-    }
-}
-const inventarios = [];
-inventarios.push(new inventarioTotal("1010", "Valvula Rosca", 45));
-inventarios.push(new inventarioTotal("1020", "Valvula Presion", 80));
-inventarios.push(new inventarioTotal("3030", "Cierre hidraulico", 200));
-
-for (const inventario of inventarios)
-    inventario.actualizacionInflacion();
