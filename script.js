@@ -50,9 +50,6 @@ function cantArticulosTotal(articuloIngresado) {
         totalUnidades = totalUnidades - cantUnidadesUsadas
         totalUnidades = totalUnidades + cantUnidadesIngresadas
         return totalUnidades
-        if (totalUnidades < 0) {
-            articuloDisponible = false
-        }
     }
     for (i = 1; i = 5; i++) {
         if (articuloIngresado != articulo) {
@@ -64,7 +61,6 @@ function cantArticulosTotal(articuloIngresado) {
         }
     }
 }
-
 //const empleados = []
 const empleados = [{
     nombre: "Jorge",
@@ -98,21 +94,27 @@ const empleados = [{
 // Declaracion de articulos
 console.log("Actualmente hay " + totalUnidades + " unidades disponibles de articulo " + articulo);
 let nombreArt, porcentajeInflacionMes
+
+const inventarios = [];
+inventarios.push(new inventarioTotal("1010", "Valvula Rosca", 45, totalUnidades));
+inventarios.push(new inventarioTotal("1020", "Valvula Presion", 80, totalUnidades));
+inventarios.push(new inventarioTotal("3030", "Cierre hidraulico", 200, totalUnidades));
 class inventarioTotal {
-    constructor(id, nombre, precio) {
+    constructor(articulo, nombreArt, totalUnidades) {
         this.id = parseInt(articulo);
         this.nombre = nombreArt.toUpperCase();
         this.cantStock = parseInt(totalUnidades);
     }
-    actualizacionInflacion() {
+    actualizacionInflacion(porcentajeInflacionMes) {
         this.precio = this.precio * (1 + porcentajeInflacionMes)
     }
 }
-const inventarios = [];
-inventarios.push(new inventarioTotal("1010", "Valvula Rosca", 45));
-inventarios.push(new inventarioTotal("1020", "Valvula Presion", 80));
-inventarios.push(new inventarioTotal("3030", "Cierre hidraulico", 200));
 
 for (const inventario of inventarios)(
-    inventario.actualizacionInflacion(porcentajeInflacionMes)
+    inventario.actualizacionInflacion()
+)
+inventarios.forEach( (cantStock) => {
+    console.log(cantStock)
+}
+
 )
