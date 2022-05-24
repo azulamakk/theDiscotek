@@ -71,12 +71,12 @@ let tabla=document.createElement("table");
 tabla.className="table table-striped";
 let tablaBody = document.createElement("tbody");
 
-for(const inventar of inventario){
+for(const inventari of inventario){
     let fila=document.createElement("tr");
     fila.innerHTML=`
         <td>${inventario.id}</td>
         <td>${inventario.nombre}</td>
-        <td>${inventario.precio}</td>`;
+        <td>${inventario.totalUnidades}</td>`;
     tablaBody.appendChild(fila);
 }
 
