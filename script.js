@@ -52,7 +52,7 @@ function activarDark(){
 }
 
 //nuestro array de objetos literales
-const inventario= [{ id: 1010,  nombre: "Tuerca", totalUnidades:300 },
+const inventarios= [{ id: 1010,  nombre: "Tuerca", totalUnidades:300 },
                   {  id: 1020,  nombre: "Valvula presion", totalUnidades:58 },
                   {  id: 3030,  nombre: "Perno"  , totalUnidades: 49 },
                   {  id: 5050,  nombre: "Valvula rosca" , totalUnidades: 74 }
@@ -71,7 +71,7 @@ let tabla=document.createElement("table");
 tabla.className="table table-striped";
 let tablaBody = document.createElement("tbody");
 
-for(const inventari of inventario){
+for(const inventario of inventarios){
     let fila=document.createElement("tr");
     fila.innerHTML=`
         <td>${inventario.id}</td>
@@ -84,12 +84,31 @@ tabla.appendChild(tablaBody);
 
 let lugarParaTabla=document.getElementById("inferior");
 lugarParaTabla.appendChild(tabla);
+let articulo = inventarioTotal.indexOf(id)
+
+function cantArticulosTotal(articuloIngresado) {
+    while (articuloIngresado == inventarios.id) {
+        inventarios.totalUnidades = inventarios.totalUnidades - cantUnidadesUsadas
+        inventarios.totalUnidades = inventarios.totalUnidades + cantUnidadesIngresadas
+        return totalUnidades
+    }
+    for (i = 1; i = 5; i++) {
+        if (articuloIngresado != articulo) {
+            alert("El codigo de articulo ingresado no coincide con el inventario. Intente de nuevo por favor")
+            articuloIngresado = prompt("Codigo articulo buscado")
+        }
+        if (i > 4) {
+            alert("Se recomienda revisar los manuales de codigos de producto. Intente mas tarde")
+        }
+    }
+}
+
 
 // Declaracion de empleados
-let nombreEmpleado, apellidoEmpleado, usuarioEmpleado, contrasenaEmpleado;
-let horarioLlegada, diaTrabajado, anioIngresoEmpleado, edadUsuario;
+//let nombreEmpleado, apellidoEmpleado, usuarioEmpleado, contrasenaEmpleado;
+//let horarioLlegada, diaTrabajado, anioIngresoEmpleado, edadUsuario;
 //Carga de datos 
-let usuarioIngresado, contrasenaIngresado
+//let usuarioIngresado, contrasenaIngresado
 //usuarioIngresado = prompt("¿Cual es su nombre de usuario?");
 //contrasenaIngresado = prompt("Ingrese su contraseña");
 //for (let m = 1; m = 3; i++) {
@@ -124,25 +143,8 @@ let usuarioIngresado, contrasenaIngresado
 //Registro de unidades en caso de re-stock. Control a cargo del empleado de turno.
 
 //Idealmente en un futuro, existiria una lista de codigos de articulos cargados
-let articulo = inventarioTotal.indexOf(id)
 
-function cantArticulosTotal(articuloIngresado) {
-    while (articuloIngresado == articulo) {
-        totalUnidades = totalUnidades - cantUnidadesUsadas
-        totalUnidades = totalUnidades + cantUnidadesIngresadas
-        return totalUnidades
-    }
-    for (i = 1; i = 5; i++) {
-        if (articuloIngresado != articulo) {
-            alert("El codigo de articulo ingresado no coincide con el inventario. Intente de nuevo por favor")
-            articuloIngresado = prompt("Codigo articulo buscado")
-        }
-        if (i > 4) {
-            alert("Se recomienda revisar los manuales de codigos de producto. Intente mas tarde")
-        }
-    }
-}
-//const empleados = []
+//Declaracion de empleados
 const empleados = [{
     nombre: "Jorge",
     apellido: "Makk",

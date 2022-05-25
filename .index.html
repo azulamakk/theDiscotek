@@ -22,11 +22,13 @@
         <p></p>
         <article>
             <label>Codigo articulo:</label>
-            <input id="idArticulo" type="text" placeholder="aqui codigo de articulo">
+            <input id="idArticulo" type="text">
             <label>Cantidad Utilizadas</label>
-            <input id="cantidadUtilizadas" type="number" placeholder="aqui cantidad utilizada">
+            <input id="cantidadUtilizadas" type="number">
             <label>Cantidad Ingresadas</label>
-            <input id="cantidadIngresadas" type="number" placeholder="aqui cantidad ingresadas al warehouse">
+            <input id="cantidadIngresadas" type="number">
+            <p></p>
+            <button class="btn btn-success" id="btnRegistroUnidades" onkeypress="cantArticulosTotal(event)">Registrar</button>
         </article>
         <article id="inferior">
         </article>
