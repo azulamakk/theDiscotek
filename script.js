@@ -25,33 +25,7 @@ let labels1=document.getElementsByTagName("label");
 
 let boton=document.getElementById("boton");
 
-// Dark mode
-function activarDark(){
-    if (boton.innerText="Light Mode"){
-        seccion.style.background="white";
-        titulo.style.color="grey";
-        for(const parrafo of parrafos){
-            parrafo.style.color="grey";
-        }
-        for(const lab of labels1){
-            lab.style.color="white";
-        }
-        boton.innerText="Dark Mode";
-    }
-    if (boton.innerText="Dark Mode"){
-    seccion.style.background="grey";
-    titulo.style.color="white";
-    for(const parrafo of parrafos){
-        parrafo.style.color="white";
-    }
-    for(const lab of labels1){
-        lab.style.color="white";
-    }
-    boton.innerText="Light Mode";
-    }
-}
-
-//nuestro array de objetos literales
+//Declaramos los articulos del inventario
 const inventarios= [{ id: 1010,  nombre: "Tuerca", totalUnidades:300 },
                   {  id: 1020,  nombre: "Valvula presion", totalUnidades:58 },
                   {  id: 3030,  nombre: "Perno"  , totalUnidades: 49 },
@@ -61,12 +35,11 @@ const inventarios= [{ id: 1010,  nombre: "Tuerca", totalUnidades:300 },
 let articuloIngresado, cantUnidadesUsadas, totalUnidades
 articuloIngresado = parseInt(document.getElementById("idArticulo"));
 
-//insertar textos enn inputs
-
+//Capturamos las cantidades utilizadas en la jornada
 let scantUnidadesUsadas=document.getElementById("cantidadUtilizadas");
 let cantUnidadesIngresadas = parseInt(document.getElementById("cantidadIngresada"))
 
-//tabla con DOM
+//Tabla con DOM: permitira visualizar el id del articulo, su nombre y las unidades disponibles
 let tabla=document.createElement("table");
 tabla.className="table table-striped";
 let tablaBody = document.createElement("tbody");
@@ -86,11 +59,12 @@ let lugarParaTabla=document.getElementById("inferior");
 lugarParaTabla.appendChild(tabla);
 let articulo = inventarioTotal.indexOf(id)
 
+//Mediante la siguiente funcion se busca el calculo de las unidades en stock
 function cantArticulosTotal(articuloIngresado) {
     while (articuloIngresado == inventarios.id) {
         inventarios.totalUnidades = inventarios.totalUnidades - cantUnidadesUsadas
         inventarios.totalUnidades = inventarios.totalUnidades + cantUnidadesIngresadas
-        return totalUnidades
+        return inventarios.totalUnidades
     }
     for (i = 1; i = 5; i++) {
         if (articuloIngresado != articulo) {
@@ -103,6 +77,36 @@ function cantArticulosTotal(articuloIngresado) {
     }
 }
 
+// Dark mode
+function activarDark(){
+    if (boton.innerText="Light Mode"){
+        seccion.style.background="navy";
+        titulo.style.color="white";
+        for(const parrafo of parrafos){
+            parrafo.style.color="white";
+        }
+        for(const lab of labels1){
+            lab.style.color="white";
+        }
+        for(const inventario of inventarios){
+            inventario.id.style.color="white"
+            inventario.id.style.color="white"
+            inventario.id.style.color="white"
+        }
+        boton.innerText="Dark Mode";
+    }
+    if (boton.innerText="Dark Mode"){
+    seccion.style.background="white";
+    titulo.style.color="navy";
+    for(const parrafo of parrafos){
+        parrafo.style.color="navy";
+    }
+    for(const lab of labels1){
+        lab.style.color="white";
+    }
+    boton.innerText="Light Mode";
+    }
+}
 
 // Declaracion de empleados
 //let nombreEmpleado, apellidoEmpleado, usuarioEmpleado, contrasenaEmpleado;
@@ -174,6 +178,3 @@ const empleados = [{
 }
 ]
 
-// Declaracion de articulos
-console.log("Actualmente hay " + totalUnidades + " unidades disponibles de articulo " + articulo);
-let nombreArt, porcentajeInflacionMes
