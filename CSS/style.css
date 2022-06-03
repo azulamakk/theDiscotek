@@ -1,40 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap');
 :root {
-    --light-0: #f8f9fa;
-    --light-1: #e9ecef;
-    --light-2: #dee2e6;
-    --dark-0: #495057;
-    --dark-1: #343a40;
-    --dark-2: #212529;
+    --p-color: #365775;
+    --bg-color: #93ABC2;
+    --h1-color: #085175;
 }
-body.dark {
-    background: var(--dark-2);
+[data-theme=dark]{
+    --p-color: #73b0e9;
+    --bg-color: #23496d;
+    --h1-color: #93ABC2;
 }
-#toggle-button {
-    position: absolute;
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+    width: 100%;
 }
-#toggleDarkMode {
-    background: var(--light-2);
-    border-radius: 20px;
-    cursor: pointer;
-    height: 38px;
+.content-wrapper{
+    text-align: center;
+    width: 100%;
+}
+h1{
+    font-size: 100px;
+    margin: 0;
+    color: var(--h1-color);
+    letter-spacing: 5px;
+}
+p{
+    font-size: 30px;
+    margin: 25px 0 30px 0;
+    color: var(--p-color);
+    letter-spacing: 2px;
+}
+.theme-switcher-wrapper{
+    align-items: center;
+    margin-top: 60px;
+}
+.theme-switch{
+    display: inline-block;
+    height: 100px;
     position: relative;
-    width: 68px;
+    width: 250px;
 }
-#toggle-button:checked + #toggleDarkMode {
-    background: var(--dark-0);
+.theme-switch input{
+    display: none;
 }
-#toggleDarkMode .darkMode {
-    background: var(--light-1);
+.slider{
+    background-color: #a0b3e7;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.9s;
+}
+.slider:before{
+    background-color: #085175;
+    bottom: 4px;
+    content: "";
+    height: 92px;
+    left: 5px;
+    position: absolute;
+    transition: 0.9s;
+    width: 92px;
+}
+input:checked + .slider{
+    background-color: #B7C23C;
+}
+input:checked + .slider::before{
+    transform: translateX(148px);
+}
+.slider.round{
+    border-radius: 80px;
+}
+.slider.round:before{
     border-radius: 50%;
-    height: 30px;
-    margin: 4px;
-    transition: transform 0.3s ease;
-    width: 30px;
-}
-#toggle-button:checked + #toggleDarkMode .darkMode {
-    background: var(--dark-1);
-    transform: translateX(30px);
 }
 section{
     text-align: center;

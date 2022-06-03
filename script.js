@@ -10,7 +10,6 @@ console.log(seccion.innerHTML);
 
 let titulo=document.getElementById("titulo");
 titulo.innerText="Control de stocks";
-titulo.style.font="bold 40px merriweather";
 
 //getElementsByTagName
 let parrafos=document.getElementsByTagName("p");
@@ -72,11 +71,34 @@ function cantArticulosTotal(articuloIngresado) {
 // Carrito
 let carritoDeJornada = []
 let list=document.getElementById("miLista")
+if(localStorage.getItem("carrito")!=null){
+    carrito=JSON.parse(localStorage.getItem("carrito"));
+    //cargarlos en la tabla-Tarea
+}else{
+    carrito=[];
+}
+let lista=document.getElementById("milista");
 
 // Dark mode
-const toggleButton = document.getElementById('toggle-button')
-toggleButton.addEventListener('change', () => {
-    document.body.classList.toggle('dark')
-  })
+const toggleswitch= document.querySelector('.theme-switch input[type="checkbox"]')
+const currentTheme =localStorage.getItem('theme')
 
-sessionStorage.clear()
+if(currentTheme){
+    document.documentElement.setAttribute('data-theme', currentTheme)
+    if(currentTheme === 'dark'){
+        toggleswitch.checked = true;
+    }
+}
+
+function switchTheme(e){
+    if (e.target.checked){
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    else{
+        document.documentElement.setAttribute("data-theme", 'light');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+toggleswitch.addEventListener('change', switchTheme, false)

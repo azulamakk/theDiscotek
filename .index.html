@@ -1,4 +1,4 @@
-√<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,37 +12,39 @@
 </head>
 
 <body>
-    <div class="container">
-    <section id="principal">
-        <article>
-            <h1 id="titulo">Checkpoint</h1>
-            <p>Control de inventario</p>
-            <p>¿Cuales han sido los resultados de la jornada?</p>
-            <input id="toggle-button" type="checkbox">
-            <label id="toggleDarkMode" for="toggle-button">
-             <div class="darkMode"></div>
-            </label>
+    <div class="content-wrapper">
+        <section id="principal">
+            <article>
+                <h1 id="titulo">Checkpoint</h1>
+                <p>Control de inventario</p>
+                <p>¿Cuales han sido los resultados de la jornada?</p>
             </article>
-        <p></p>
-        <article>
-            <label>Codigo articulo:</label>
-            <input id="idArticulo" type="text">
-            <label>Cantidad Utilizadas</label>
-            <input id="cantidadUtilizadas" type="number">
-            <label>Cantidad Ingresadas</label>
-            <input id="cantidadIngresadas" type="number">
-            <p></p>
-            <button class="btn btn-success" id="btnRegistroUnidades" onkeypress="cantArticulosTotal(event)">Registrar</button>
-        </article>
-        <div>
-            <ul id="milista" class="row list-group list-group-horizontal">
-                <!-- Aqui los productos -->
-            </ul>
-            <p></p>
-        </div>
-        <!--<article id="inferior">--->
-        <!--</article>--->
-    </section>
+            <div class="theme-switch-wrapper">
+                <label for="checkbox" class="theme-switch">
+                    <input type="checkbox" id="checkbox">
+                    <div class="slider round"></div>
+                </label>
+            </div>
+            <article>
+                <label>Codigo articulo:</label>
+                <input id="idArticulo" type="text">
+                <label>Cantidad Utilizadas</label>
+                <input id="cantidadUtilizadas" type="number">
+                <label>Cantidad Ingresadas</label>
+                <input id="cantidadIngresadas" type="number">
+                <p></p>
+                <button class="btn btn-success" id="btnRegistroUnidades"
+                    onkeypress="cantArticulosTotal(event)">Registrar</button>
+            </article>
+            <div>
+                <ul id="milista" class="row list-group list-group-horizontal">
+                    <!-- Aqui los productos -->
+                </ul>
+                <p></p>
+            </div>
+            <!--<article id="inferior">--->
+            <!--</article>--->
+        </section>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -50,4 +52,5 @@
 </script>
 <script src="script.js"></script>
 <script src="articulos.js"></script>
+
 </html>
