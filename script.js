@@ -36,14 +36,14 @@ let tabla=document.createElement("table");
 tabla.className="table table-striped";
 let tablaBody = document.createElement("tbody");
 
-for(const inventario of inventarios){
-    let fila=document.createElement("tr");
-    fila.innerHTML=`
-        <td>${inventario.id}</td>
-        <td>${inventario.nombre}</td>
-        <td>${inventario.totalUnidades}</td>`;
-    tablaBody.appendChild(fila);
-}
+//for(const inventario of inventarios){
+//    let fila=document.createElement("tr");
+//    fila.innerHTML=`
+//        <td>${inventario.id}</td>
+//        <td>${inventario.nombre}</td>
+//        <td>${inventario.totalUnidades}</td>`;
+//    tablaBody.appendChild(fila);
+//}
 
 tabla.appendChild(tablaBody);
 
@@ -78,6 +78,38 @@ if(localStorage.getItem("carrito")!=null){
     carrito=[];
 }
 let lista=document.getElementById("milista");
+renderizarProductos();
+
+function renderizarProductos() {
+    for (const inventario of inventarios) {
+        lista.innerHTML+=`<li class="col-sm-3 list-group-item">
+        <h3> ID: ${inventario.id} </h3>
+        <p> Producto: ${inventario.nombre}</p>
+        <p><strong> $ ${inventario.totalUnidades} </strong></p>
+        <button class='btn btn-danger' id='btn${inventario.id}'>Comprar</button>
+        </li>`;
+    }
+    //eventos
+    inventarios.forEach(inventario => {
+        //Evento para cada boton
+        document.getElementById(`btn${inventario.id}`).addEventListener('click', function() {
+            agregarAlCarrito(inventario);
+        });
+    });
+}
+
+function agregarAlCarrito(inventarioNuevo) {
+    carrito.push(inventarioNuevo);
+    console.log(carrito);
+    alert("articulo: "+inventarioNuevo.nombre+" se ha registrado")
+    document.getElementById("tablabody").innerHTML+=`
+    <tr>
+        <td>${inventarioNuevo.id}</td>
+        <td>${inventarioNuevo.nombre}</td>
+        <td>${inventarioNuevo.totalUnidades}</td>
+    </tr>`;
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+}
 
 // Dark mode
 const toggleswitch= document.querySelector('.theme-switch input[type="checkbox"]')

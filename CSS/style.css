@@ -67,12 +67,15 @@ p{
 input:checked + .slider{
     background-color: #B7C23C;
 }
+
 input:checked + .slider::before{
     transform: translateX(148px);
 }
+
 .slider.round{
     border-radius: 80px;
 }
+
 .slider.round:before{
     border-radius: 50%;
 }

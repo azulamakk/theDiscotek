@@ -36,14 +36,29 @@
                 <button class="btn btn-success" id="btnRegistroUnidades"
                     onkeypress="cantArticulosTotal(event)">Registrar</button>
             </article>
-            <div>
-                <ul id="milista" class="row list-group list-group-horizontal">
-                    <!-- Aqui los productos -->
-                </ul>
-                <p></p>
+            <div class="container">
+                <div>
+                    <ul id="milista" class="row list-group list-group-horizontal">
+                        <!-- Aqui los productos -->
+                    </ul>
+                    <p></p>
+                </div>
+                <div>
+                    <h4>Unidades de la jornada:</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablabody">
+                            <!-- aqui tabla carrito -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <!--<article id="inferior">--->
-            <!--</article>--->
         </section>
     </div>
 </body>
