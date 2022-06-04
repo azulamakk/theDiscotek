@@ -31,22 +31,6 @@ articuloIngresado = parseInt(document.getElementById("idArticulo"));
 let scantUnidadesUsadas=document.getElementById("cantidadUtilizadas");
 let cantUnidadesIngresadas = parseInt(document.getElementById("cantidadIngresada"))
 
-//Tabla con DOM: permitira visualizar el id del articulo, su nombre y las unidades disponibles
-let tabla=document.createElement("table");
-tabla.className="table table-striped";
-let tablaBody = document.createElement("tbody");
-
-//for(const inventario of inventarios){
-//    let fila=document.createElement("tr");
-//    fila.innerHTML=`
-//        <td>${inventario.id}</td>
-//        <td>${inventario.nombre}</td>
-//        <td>${inventario.totalUnidades}</td>`;
-//    tablaBody.appendChild(fila);
-//}
-
-tabla.appendChild(tablaBody);
-
 let lugarParaTabla=document.getElementById("inferior");
 lugarParaTabla.appendChild(tabla);
 let articulo = inventarioTotal.indexOf(id)
