@@ -35,6 +35,7 @@ let lugarParaTabla = document.getElementById("inferior");
 lugarParaTabla.appendChild(tabla);
 let articulo = inventarioTotal.indexOf(id)
 
+document.getElementById("btnRegistroUnidades").addEventListener('click', cantArticulosTotal(articuloIngresado))
 //Mediante la siguiente funcion se busca el calculo de las unidades en stock
 function cantArticulosTotal(articuloIngresado) {
     for (const inventario of inventarios) {
