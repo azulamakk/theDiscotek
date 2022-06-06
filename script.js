@@ -5,42 +5,44 @@
 console.dir(document.body.children);
 
 //getElementById
-let seccion=document.getElementById("principal");
+let seccion = document.getElementById("principal");
 console.log(seccion.innerHTML);
 
-let titulo=document.getElementById("titulo");
-titulo.innerText="Control de stocks";
+let titulo = document.getElementById("titulo");
+titulo.innerText = "Control de stocks";
 
 //getElementsByTagName
-let parrafos=document.getElementsByTagName("p");
+let parrafos = document.getElementsByTagName("p");
 console.log(parrafos);
 console.log(parrafos[1].innerHTML);
 
-parrafos[0].innerText=new Date().toLocaleString();
+parrafos[0].innerText = new Date().toLocaleString();
 
-let labels1=document.getElementsByTagName("label");
+let labels1 = document.getElementsByTagName("label");
 
-let boton=document.getElementById("boton");
+let boton = document.getElementById("boton");
 
 //Declaramos los articulos del inventario
 
-let articuloIngresado, cantUnidadesUsadas, totalUnidades
+let articuloIngresado, totalUnidades
 articuloIngresado = parseInt(document.getElementById("idArticulo"));
 
 //Capturamos las cantidades utilizadas en la jornada
-let scantUnidadesUsadas=document.getElementById("cantidadUtilizadas");
+let cantUnidadesUsadas = document.getElementById("cantidadUtilizadas");
 let cantUnidadesIngresadas = parseInt(document.getElementById("cantidadIngresada"))
 
-let lugarParaTabla=document.getElementById("inferior");
+let lugarParaTabla = document.getElementById("inferior");
 lugarParaTabla.appendChild(tabla);
 let articulo = inventarioTotal.indexOf(id)
 
 //Mediante la siguiente funcion se busca el calculo de las unidades en stock
 function cantArticulosTotal(articuloIngresado) {
-    while (articuloIngresado == inventarios.id) {
-        inventarios.totalUnidades = inventarios.totalUnidades - cantUnidadesUsadas
-        inventarios.totalUnidades = inventarios.totalUnidades + cantUnidadesIngresadas
-        return inventarios.totalUnidades
+    for (const inventario of inventarios) {
+        while (articuloIngresado == inventarios.id) {
+            inventarios.totalUnidades = inventarios.totalUnidades - cantUnidadesUsadas
+            inventarios.totalUnidades = inventarios.totalUnidades + cantUnidadesIngresadas
+            return inventarios.totalUnidades
+        }
     }
     for (i = 1; i = 5; i++) {
         if (articuloIngresado != articulo) {
@@ -54,19 +56,19 @@ function cantArticulosTotal(articuloIngresado) {
 }
 // Carrito
 let carritoDeJornada = []
-let list=document.getElementById("miLista")
-if(localStorage.getItem("carrito")!=null){
-    carrito=JSON.parse(localStorage.getItem("carrito"));
+let list = document.getElementById("miLista")
+if (localStorage.getItem("carrito") != null) {
+    carrito = JSON.parse(localStorage.getItem("carrito"));
     //cargarlos en la tabla-Tarea
-}else{
-    carrito=[];
+} else {
+    carrito = [];
 }
-let lista=document.getElementById("milista");
+let lista = document.getElementById("milista");
 renderizarProductos();
 
 function renderizarProductos() {
     for (const inventario of inventarios) {
-        lista.innerHTML+=`<li class="col-sm-3 list-group-item">
+        lista.innerHTML += `<li class="col-sm-3 list-group-item">
         <h3> ID: ${inventario.id} </h3>
         <p> Producto: ${inventario.nombre}</p>
         <p><strong> $ ${inventario.totalUnidades} </strong></p>
@@ -76,7 +78,7 @@ function renderizarProductos() {
     //eventos
     inventarios.forEach(inventario => {
         //Evento para cada boton
-        document.getElementById(`btn${inventario.id}`).addEventListener('click', function() {
+        document.getElementById(`btn${inventario.id}`).addEventListener('click', function () {
             agregarAlCarrito(inventario);
         });
     });
@@ -85,33 +87,32 @@ function renderizarProductos() {
 function agregarAlCarrito(inventarioNuevo) {
     carrito.push(inventarioNuevo);
     console.log(carrito);
-    alert("articulo: "+inventarioNuevo.nombre+" se ha registrado")
-    document.getElementById("tablabody").innerHTML+=`
+    alert("articulo: " + inventarioNuevo.nombre + " se ha registrado")
+    document.getElementById("tablabody").innerHTML += `
     <tr>
         <td>${inventarioNuevo.id}</td>
         <td>${inventarioNuevo.nombre}</td>
         <td>${inventarioNuevo.totalUnidades}</td>
     </tr>`;
-    localStorage.setItem("carrito",JSON.stringify(carrito));
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 // Dark mode
-const toggleswitch= document.querySelector('.theme-switch input[type="checkbox"]')
-const currentTheme =localStorage.getItem('theme')
+const toggleswitch = document.querySelector('.theme-switch input[type="checkbox"]')
+const currentTheme = localStorage.getItem('theme')
 
-if(currentTheme){
+if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme)
-    if(currentTheme === 'dark'){
+    if (currentTheme === 'dark') {
         toggleswitch.checked = true;
     }
 }
 
-function switchTheme(e){
-    if (e.target.checked){
+function switchTheme(e) {
+    if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-    }
-    else{
+    } else {
         document.documentElement.setAttribute("data-theme", 'light');
         localStorage.setItem('theme', 'light');
     }
