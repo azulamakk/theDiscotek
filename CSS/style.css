@@ -31,6 +31,10 @@ p{
     color: var(--p-color);
     letter-spacing: 2px;
 }
+#btnCargaFinalizada{
+    color: rgb(14, 117, 14);
+    padding: 4rem;
+}
 .theme-switcher-wrapper{
     align-items: center;
     margin-top: 60px;
@@ -67,11 +71,17 @@ p{
 input:checked + .slider{
     background-color: #B7C23C;
 }
-
 input:checked + .slider::before{
     transform: translateX(148px);
 }
-
+body {
+    padding-top: 5rem;
+    background-color: #f5f5f5;
+}
+.form-signin {
+    max-width: 25rem;
+    margin: auto;
+}
 .slider.round{
     border-radius: 80px;
 }
