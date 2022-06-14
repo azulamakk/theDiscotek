@@ -25,24 +25,20 @@
                     <div class="slider round"></div>
                 </label>
             </div>
-            <article>
-                <label>Codigo articulo:</label>
-                <input id="idArticulo" type="text">
-                <label>Cantidad Utilizadas</label>
-                <input id="cantidadUtilizadas" type="number">
-                <label>Cantidad Ingresadas</label>
-                <input id="cantidadIngresadas" type="number">
-                <p></p>
-                <button class="btn btn-success" id="btnRegistroUnidades">Registrar</button>
-            </article>
+            <section>
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="discos">
+                        <!-- aca ingresan los datos del json discos -->
+                    </tbody>
+                </table>
+            </section>
             <div class="container">
-                <div>
-                    <ul id="milista" class="row list-group list-group-horizontal">
-                        <!-- Aqui los productos -->
-                    </ul>
-                    <p></p>
-                </div>
-                <div>
                     <h4>Unidades de la jornada:</h4>
                     <table class="table table-striped">
                         <thead>
@@ -67,6 +63,6 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
 </script>
 <script src="script.js"></script>
-<script src="articulos.js"></script>
+<script src="ajax.js"></script>
 
 </html>

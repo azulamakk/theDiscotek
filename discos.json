@@ -1,0 +1,103 @@
+{
+    "discos": [{
+        "nombre": "Brothers In Arms",
+        "artista": "Dire Traits",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-dire-straits-brothers-1635183720.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "Hysteria",
+        "artista": "Def Leppard",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-def-leppard-hysteria-1635183724.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "The Queen Is Dead",
+        "artista": "The Smiths",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-smiths-1635183719.jpeg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "Crowned House",
+        "artista": "Crowned House",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-crowded-house-1635183721.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "Graceland",
+        "artista": "Paul Simon",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-paul-simon-graceland-1635183723.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "1984",
+        "artista": "Van Halen",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-van-halen-1984-1635183720.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "Paul's Boutique",
+        "artista": "Beastie Boys",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-beastie-boys-1635183720.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "Remain in Light",
+        "artista": "Talking Heads",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-talking-heads-1635183721.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "The Joshua Tree",
+        "artista": "U2",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-u2-joshua-tree-1635183720.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "Murmur",
+        "artista": "R.E.M.",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-rem-murmur-1635183721.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "...And Justice For All",
+        "artista": "Metallica",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-metallica-justice-1635183723.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "Surfer Rosa",
+        "artista": "The Pixies",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-pixies-surfer-rosa-1635183723.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "Synchronicity",
+        "artista": "The Police",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-the-police-synchronicity-1635183723.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "Purple Rain",
+        "artista": "Prince and the Revolution",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-prince-purple-rain-1635183722.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "Tattoo You",
+        "artista": "The rolling stones",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-rolling-stones-tattoo-you-1635183722.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "Born in the U.S.A.",
+        "artista": "Bruce Springsteen",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-springsteen-born-usa-1635183721.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    },
+    {
+        "nombre": "Back In Black",
+        "artista": "AC/CV",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-ac-dc-back-in-black-1635183720.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "London Calling",
+        "artista": "The Clash",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-clash-london-calling-1635183723.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "Thriller",
+        "artista": "Michael Jackson",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-michael-jackson-thriller-1635183723.jpg?crop=1xw:1xh;center,top&resize=980:*"
+    },
+    {
+        "nombre": "Appetite For Destruction",
+        "artista": "Guns N' Roses",
+        "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-discos-80s-appetite-destruction-1635183720.jpg?crop=1xw:1xh;center,top&resize=768:*"
+    }
+    ]
+}

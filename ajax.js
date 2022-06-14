@@ -1,16 +1,17 @@
 //GET
 function obtenerDatos(){
-    const URLGet = "https://api.itbook.store/1.0/new"
+    const URLGet = "/discos.json"
     fetch(URLGet)
         .then(resultado => resultado.json())
         .then(data =>{
-            let libros=data.books;
-            console.log(libros);
-            libros.forEach(libro => {
-                document.getElementById("libros").innerHTML+=
+            let discos=data.books;
+            console.log(discos);
+            discos.forEach(disco => {
+                document.getElementById("discos").innerHTML+=
                     <tr>
-                        <td>${libro.title}</td>
-                        <td><img src="${libro.image}"></img></td>
+                        <td>${disco.nombre}</td>
+                        <td>${disco.artista}</td>
+                        <td><img src="${disco.img}"></img></td>
                     </tr>
             });
         })
@@ -28,6 +29,20 @@ function enviarDatos(){
     }
     fetch(URLPost,{
         method: 'POST',
-        body:JSON.stringify(objeto)
+        body: JSON.stringify(objeto),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        }
     })
+        .then((respuesta) => respuesta.json())
+        .then((datos) => {
+            console.log("Data que retorna a POST JSONPlaceHolder")
+            console.log(datos)
+        })
+}
+
+// GET local
+function obtenerArchivos(){
+    const URLJSON="/login.json";
+
 }
