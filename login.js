@@ -27,19 +27,22 @@ const empleados = [{
     contrasena: "Canelones"
 }]
 
-
+// Boton de registro
 let registrar = document.getElementById("btnCargaFinalizada")
 registrar.innerText = "Ingresar";
 
+// Link con index.html
 var jwt = localStorage.getItem("jwt");
 if (jwt != null) {
   window.location.href = "index.html"
 }
 
+
 function login() {
   const usuario = document.getElementById("usuario").value;
   const contrasenia = document.getElementById("contrasenia").value;
 
+  // registro de inputs
   const xhttp = new XMLHttpRequest();
   xhttp.open("POST", "https://www.mecallapi.com/api/login");
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
