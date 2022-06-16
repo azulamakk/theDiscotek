@@ -12,49 +12,40 @@
 </head>
 
 <body>
-    <div class="content-wrapper">
+    <div class="content-wrapper container">
         <section id="principal">
             <article>
                 <h1 id="titulo">Checkpoint</h1>
                 <p>Control de inventario</p>
                 <p>¿Cuales han sido los resultados de la jornada?</p>
             </article>
+            <!-- Dark mode -->
             <div class="theme-switch-wrapper">
                 <label for="checkbox" class="theme-switch">
                     <input type="checkbox" id="checkbox">
                     <div class="slider round"></div>
                 </label>
             </div>
-            <section>
-                <table class="table table-dark">
+            <div>
+                <ul id="milista" class="row list-group list-group-horizontal">
+                    <!-- Aqui los productos -->
+                </ul>
+                <p></p>
+            </div>
+            <div>
+                <h4>Tu carrito:</h4>
+                <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Titulo</th>
-                            <th>Imagen</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
                         </tr>
                     </thead>
-                    <tbody id="discos">
-                        <!-- aca ingresan los datos del json discos -->
+                    <tbody id="tablabody">
+                        <!-- aqui tabla carrito -->
                     </tbody>
                 </table>
-            </section>
-            <div class="container">
-                    <h4>Unidades de la jornada:</h4>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Cantidad</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tablabody">
-                            <!-- aqui tabla carrito -->
-                        </tbody>
-                    </table>
-                </div>
-                <button class="btn btn-success" id="btnCargaFinalizada"
-                onkeypress="cantArticulosTotal(event)">Carga finalizada</button>
             </div>
         </section>
     </div>
@@ -63,6 +54,5 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
 </script>
 <script src="script.js"></script>
-<script src="ajax.js"></script>
 
 </html>
