@@ -26,10 +26,13 @@ h1{
     letter-spacing: 5px;
 }
 p{
-    font-size: 30px;
+    font-size: 5px;
     margin: 25px 0 30px 0;
     color: var(--p-color);
-    letter-spacing: 2px;
+}
+#imgCarrito{
+    width: 35px;
+    height: 35px;
 }
 #btnCargaFinalizada{
     color: rgb(14, 117, 14);
