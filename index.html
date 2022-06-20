@@ -6,149 +6,144 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../JSCH/CSS/style.css">
-    <link rel="icon" type="image/x-icon" href="img/cdicon.png">
+    <link rel="icon" type="image/x-icon" href="img/icono.png">
     <title>Discotek</title>
 </head>
 
 <body>
-    <div class="content-wrapper container">
-        <nav id="nav" class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img class="bg-img m-3 redondo" src="img/logoprinc.jpeg" alt="logo-nav" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#index.html">Inicio</a>
-                        <a class="nav-link" href="#productos">Productos</a>
-                        <a class="nav-link" href="#nosotros">Nosotros</a>
-                        <a class="nav-link" href="#contacto">Contacto</a>
+    <header id="header">
+        <div class="content-wrapper container">
+            <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a href="index.html"><img src="img/logoDiscotek.png" alt="Logo Discotek" id="imgLogo"></a>
+                    <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation" id="hamburguesa">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end heightAuto" id="navbarNav">
+                        <div class="navbar-nav">
+                            <a class="nav-link active navUl navUlLi navUlLiA" aria-current="page"
+                                href="#index.html">Inicio</a>
+                            <a class="nav-link navUl navUlLi navUlLiA" href="#productos">Productos</a>
+                            <a class="nav-link navUl navUlLi navUlLiA" href="#nosotros">Nosotros</a>
+                            <a class="nav-link navUl navUlLi navUlLiA" href="#contacto">Contacto</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-    <h1 id="titulo">Discotek: Inicio</h1>
-    <section id="productos">
-        <div class="container">
-            <p>Nuestro catalogo</p>
-            <div class="row" id="cardsProductos"></div>
+            </nav>
         </div>
-        <template id="carritoCompra">
+        <img src="img/header.jpeg" alt="Disquera" class="img-fluid w-100">
+    </header>
+    <h1 id="titulo">Discotek: Inicio</h1>
+    <main id="productos">
+        <div id="tituloPrincipal" class="container">
+            <h1 class="m-3 text-white-50">Todos los éxitos en vinilo</h1>
+            <div class="row" id="cards"></div>
+        </div>
+        <template id="templateCarrito">
             <tr>
-                <th scope="row">Código</th>
-                <td></td>
+                <th scope="row">id</th>
+                <td>Disco</td>
+                <td>1</td>
                 <td>
                     <button class="btn btn-success btn-sm">+</button>
                     <button class="btn btn-danger btn-sm">-</button>
                 </td>
             </tr>
         </template>
-        <div id="titulo-principal" class="container">
-            <h1 class="m-3 text-white-50">Exitos en vinilo</h1>
-            <div class="row" id="cards"></div>
-          </div>
-          <template id="templateCarrito">
-            <tr>
-              <th scope="row">Id</th>
-              <td>Nombre</td>
-              <td>Artista</td>
-              <td>1</td>
-              <td>
-                <button class="btn btn-success btn-sm">+</button>
-                <button class="btn btn-danger btn-sm">-</button>
-              </td>
-              <td>$ <span>500</span></td>
-            </tr>
-          </template>
-          <template id="templateCard">
+        <template id="templateCard">
             <div class="col-12 mb-2 col-md-4">
-              <div id="card-color" class="card shadow mt-4 mt-md-0">
-                <img src="" alt="" class="card-img-top" />
-                <div class="card-body">
-                  <h5 class="titulo">Titulo</h5>
-                  <h6 class="text-muted">Descripción</h6>
-                  <p>$ <span>Precio</span></p>
-                  <button class="btn btn-dark">Comprar</button>
+                <div id="card-color" class="card shadow mt-4 mt-md-0">
+                    <img src="" alt="" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="titulo">Nombre</h5>
+                        <h6 class="text-muted">Artista</h6>
+                        <p><span>Gênero</span></p>
+                        <button class="btn btn-dark">Comprar</button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </template>
-    </section>
-    <!-- Dark mode -->
-    <div class="theme-switch-wrapper">
-        <label for="checkbox" class="theme-switch">
-            <input type="checkbox" id="checkbox">
-            <div class="slider round"></div>
-        </label>
-    </div>
-    <div>
-        <ul id="milista" class="row list-group list-group-horizontal">
-            <!-- Aqui los productos -->
-        </ul>
-        <p></p>
-    </div>
-    <div id="table-carrito" class="container table-responsive">
-        <hr>
-        <h4 class="m-4"><img class="bi bi-envelope mr-3" src="img/carrito.png" id="imgCarrito"></img>Tu carrito💿</h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Artista</th>
-                    <th scope="col">Cantidad</th>
-                </tr>
-            </thead>
-            <span id="UF" class="text-center text-black"></span>
-            <hr>
-            <tbody id="items" class="text-black"></tbody>
-            <tfoot>
-                <tr id="footer">
-                    <th scope="row" colspan="5">
-                        Carrito vacío
-                    </th>
-                </tr>
-            </tfoot>
-        </table>
-        <template id="templateFooter">
-            <th scope="row" colspan="2">Total</th>
-            <td>10</td>
-            <td>
-                <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-                    Vaciar carrito
-                </button>
-                <button class="btn btn-success btn-sm" id="finalizar-compra">
-                    Finalizar compra
-                </button>
-            </td>
-            <td></td>
-            <td></td>
-            <td class="font-weight-bold">$ <span>5000</span></td>
         </template>
-    </div>
-</body>
-<footer id="contacto">
-    <div class="container p-4">
-      <div class="row g-4 d-flex justify-content-between align-content-between">
-        <div class="col-12 col-sm-6 col-md-6 p-3">
-          <p><i id="icon" class="bi bi-person-lines-fill mr-3 text-black" ></i> The Discotek Store</p>
-          <p><i class="bi bi-house-door mr-3  text-black"></i> Buenos Aires, Argentina</p></p>
-          <p><i class="bi bi-envelope mr-3  text-black"></i> info@discotek.com</p>
+
+        <div id="table-carrito" class="container table-responsive">
+            <hr>
+            <h4 class="m-4"><img class="bi bi-envelope mr-3" src="images/cart.png"></img> Carrito de compras</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Artista</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Acción</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="items" class="text-black"></tbody>
+                <tfoot>
+                    <tr id="footer">
+                        <th scope="row" colspan="5">
+                            Carrito vacío
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+            <template id="templateFooter">
+                <th scope="row" colspan="2">Total productos</th>
+                <td>10</td>
+                <td>
+                    <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                        Vaciar carrito
+                    </button>
+                    <button class="btn btn-success btn-sm" id="finalizar-compra">
+                        Finalizar compra
+                    </button>
+                </td>
+                <td></td>
+                <td></td>
+                <td class="font-weight-bold">$ <span>5000</span></td>
+            </template>
         </div>
-      </div>
+        <section id="servicios">
+            <div class="container">
+                <div class="row g-4 my-5 d-flex justify-content-center align-content-center align-items-center">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center shadow mt-4 mt-md-0">
+                        <h2 class="text-white-50">¿Qué nos motiva?</h2>
+                        <p class="text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Incidunt odio error perferendis, id omnis blanditiis vitae
+                            ducimus rerum enim ex! Repellat maxime veniam repellendus
+                            voluptatum pariatur animi quo eligendi molestias. Harum ut
+                            recusandae neque, similique excepturi alias ratione sed nesciunt
+                            delectus? Illo, reprehenderit qui. Esse suscipit fugit hic
+                            quibusdam in laudantium, quaerat perferendis laboriosam ad vel
+                            ea totam, dolor vitae..
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    <div class="container p-4">
+        <div class="row g-4 d-flex justify-content-between align-content-between">
+            <div class="col-12 col-sm-6 col-md-6 p-3">
+                <p> The Discotek Store</p>
+                <p> Buenos Aires, Argentina</p>
+                <p> info@discotek.com</p>
+            </div>
+        </div>
     </div>
-  </footer>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
 </script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="productos.js"></script>
+<script src="index.js"></script>
 <script src="nosotros.js"></script>
 <script src="contacto.js"></script>
+
 </html>
