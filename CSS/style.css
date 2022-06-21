@@ -43,7 +43,6 @@ h1 {
 }
 
 body {
-    padding-top: 5rem;
     background-color: #f1e7c1;
 }
 
@@ -165,6 +164,7 @@ label, p{
     min-height: 2rem;
     border-color: rgb(61, 110, 61);
     border-width: 2px;
+    margin: 2rem;
 }
 
 ::placeholder{

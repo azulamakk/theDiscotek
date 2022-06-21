@@ -47,7 +47,7 @@ let lista = document.getElementById("milista");
 renderizarProductos();
 
 function renderizarProductos(){
-    const URLGet = "/discos.json"
+    const URLGet = "discos.json"
     fetch(URLGet)
         .then(resultado => resultado.json())
         .then(data =>{
