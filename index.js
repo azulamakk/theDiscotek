@@ -9,19 +9,19 @@ const templateCarrito = document.getElementById("templateCarrito").content
 const fragment = document.createDocumentFragment()
 let productosCarrito = {}
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     fetchData()
-    if (localStorage.getItem('carrito')) {
-        productosCarrito = JSON.parse(localStorage.getItem('carrito'))
+    if (localStorage.getItem("carrito")) {
+        productosCarrito = JSON.parse(localStorage.getItem("carrito"))
         completarCarrito()
     }
 })
 
-cards.addEventListener('click', e => {
+cards.addEventListener("click", e => {
     addCarrito(e)
 })
 
-items.addEventListener('click', e => {
+items.addEventListener("click", e => {
     btnAccion(e)
 })
 
@@ -36,19 +36,19 @@ const fetchData = async () => {
 }
 
 const printCards = data => {
-    data.forEach(producto => {
+    data.forEach(disco => {
         const {
-            id,
+            id, 
+            img,
             nombre,
             artista,
             genero
-        } = producto
-
+        } = disco
         templateCard.querySelector('.btn-dark').dataset.id = id
-        templateCard.querySelector('img').setAttribute('src', img)
-        templateCard.querySelector('h4').textContent = nombre
-        templateCard.querySelector('h5').textContent = artista
-        templateCard.querySelector('p').textContent = genero
+        templateCard.querySelector("img").setAttribute('src', img)
+        templateCard.querySelector("h5").textContent = nombre
+        templateCard.querySelector("h6").textContent = artista
+        templateCard.querySelector("span").textContent = genero
 
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
@@ -59,7 +59,7 @@ const printCards = data => {
 const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {
         e.target.onmouseover = () => {
-            e.target.style.backgroundColor = 'green'
+            e.target.style.backgroundColor = "green"
         }
         Swal.fire({
             title: 'Enhorabuena',
@@ -73,39 +73,41 @@ const addCarrito = e => {
     e.stopPropagation()
 }
 
-const setCarrito = objeto => {
-    const producto = {
-        id: objeto.querySelector('.btn-dark').dataset.id,
-        nombre: disco.querySelector('h4').textContent,
-        artista: disco.querySelector('h5').textContent,
-        genero: disco.querySelector('p').textContent,
+const setCarrito = obj => {
+    const disco = {
+        id: obj.querySelector(".btn-dark").dataset.id,
+        nombre: obj.querySelector("h5").textContent,
+        artista: obj.querySelector("h6").textContent,
+        genero: obj.querySelector("span").textContent,
         cantidad: 1
     }
-    if (productosCarrito.hasOwnProperty(producto.id)) {
-        producto.cantidad = productosCarrito[producto.id].cantidad + 1
+    if (productosCarrito.hasOwnProperty(disco.id)) {
+        disco.cantidad = productosCarrito[disco.id].cantidad + 1
     }
 
     //empujar ahora todo al carrito
-    productosCarrito[producto.id] = {
-        ...producto
+    productosCarrito[disco.id] = {
+        ...disco
     }
     completarCarrito()
 }
 
 const completarCarrito = () => {
-    items.innerHTML = ''
-    Object.values(productosCarrito).forEach(producto => {
-        templateCarrito.querySelector('th').textContent = producto.id
-        templateCarrito.querySelectorAll('td')[0].textContent = producto.modelo
-        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
-
+    items.innerHTML = ""
+    Object.values(productosCarrito).forEach(disc => {
+        templateCarrito.querySelector('th').textContent = disc.id
+        templateCarrito.querySelectorAll('td')[0].textContent = disc.modelo
+        templateCarrito.querySelectorAll('td')[1].textContent = disc.cantidad
+        templateCarrito.querySelector('.btn-success').dataset.id = disc.id
+        templateCarrito.querySelector('.btn-danger').dataset.id = disc.id
+        
         const clone = templateCarrito.cloneNode(true)
         fragment.appendChild(clone)
     })
     items.appendChild(fragment)
     completarFooter()
 
-    localStorage.setItem('carrito', JSON.stringify(productosCarrito))
+    localStorage.setItem("carrito", JSON.stringify(productosCarrito))
 }
 
 
@@ -113,46 +115,39 @@ const completarFooter = () => {
     footer.innerHTML = ''
     if (Object.keys(productosCarrito).length === 0) {
         footer.innerHTML = `
-      <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+      <th scope="row" colspan="5">Carrito vacío</th>
       `
     }
 
     const nCantidad = Object.values(productosCarrito).reduce((acc, {
         cantidad
     }) => acc + cantidad, 0)
-    const nPrecio = Object.values(productosCarrito).reduce((acc, {
-        cantidad,
-        precio
-    }) => acc + cantidad * precio * 1.19, 0)
-    // console.log(nPrecio)
 
     templateFooter.querySelectorAll('td')[0].textContent = nCantidad
-    templateFooter.querySelector('span').textContent = nPrecio
 
     const clone = templateFooter.cloneNode(true)
     fragment.appendChild(clone)
     footer.appendChild(fragment)
 
-    const btnVaciar = document.getElementById('vaciar-carrito')
+    const btnVaciar = document.getElementById('vaciarCarrito')
     btnVaciar.addEventListener('click', () => {
         productosCarrito = {}
         completarCarrito()
 
         Swal.fire({
-            title: 'Ooh!! Vuelve a comprar',
-            text: 'Haz vaciado tu carrito!',
+            title: 'Carrito vaciado',
+            text: '¿Que esperas para llenarlo de nuevo?',
             icon: 'success',
             confirmButtonText: 'Cool'
         })
     })
 
-    const btnfinalizar = document.getElementById('finalizar-compra')
+    const btnfinalizar = document.getElementById('finalizarCompra')
     btnfinalizar.addEventListener('click', () => {
         if (Object.keys(productosCarrito).length !== 0) {
             Swal.fire({
                 title: "Pedido confirmado",
                 text: "Será preparado tu pedido",
-                imageUrl: 'https://unsplash.it/400/200',
                 imageWidth: 170,
                 imageHeight: 159,
                 imageAlt: "Ok image",
@@ -171,24 +166,24 @@ const completarFooter = () => {
 }
 
 const btnAccion = e => {
-    // console.log(e.target)
     if (e.target.classList.contains('btn-success')) {
 
-        const producto = productosCarrito[e.target.dataset.id]
-        producto.cantidad++
+        const disco = productosCarrito[e.target.dataset.id]
+        disco.cantidad++
         productosCarrito[e.target.dataset.id] = {
-            ...producto
+            ...disco
         }
         completarCarrito()
     }
     if (e.target.classList.contains('btn-danger')) {
 
-        const producto = productosCarrito[e.target.dataset.id]
-        producto.cantidad--
-        if (producto.cantidad === 0) {
+        const disco = productosCarrito[e.target.dataset.id]
+        disco.cantidad--
+        if (disco.cantidad === 0) {
             delete productosCarrito[e.target.dataset.id]
         }
         completarCarrito()
     }
     e.stopPropagation()
 }
+
