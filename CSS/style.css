@@ -135,7 +135,7 @@ footer {
     padding-top: 2rem; 
 }
 
-p{
+label, p{
     color: #291d16;
     line-height: 2rem;
     font-size: 1.6rem;
@@ -155,4 +155,19 @@ p{
 
 #imgHeader{
     display: flex;
+}
+
+.completar{
+    min-width: 300px; 
+    font-family: 'Quicksand', sans-serif;
+    color: #f9e8df;
+    background-color: #583e2e;
+    min-height: 2rem;
+    border-color: rgb(61, 110, 61);
+    border-width: 2px;
+}
+
+::placeholder{
+    color: #f9e8df;
+    font-family: 'Quicksand', sans-serif;
 }
