@@ -8,10 +8,9 @@ const templateFooter = document.getElementById("templateFooter").content
 const templateCarrito = document.getElementById("templateCarrito").content
 const fragment = document.createDocumentFragment()
 let productosCarrito = {}
-let discosJSON=[]
+let discosJSON = []
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchData()
     if (localStorage.getItem("carrito")) {
         productosCarrito = JSON.parse(localStorage.getItem("carrito"))
         completarCarrito()
@@ -26,9 +25,9 @@ items.addEventListener("click", e => {
     btnAccion(e)
 })
 
-function mostrarProductos () {
+function mostrarProductos() {
     // La idea es que aparezcan los productos en el html
-    console.log (discosJSON);
+    console.log(discosJSON);
     for (const disco of discosJSON) {
 
         document.querySelector("#contenedorCards").innerHTML += (`<div class="card shadow mt-4 mt-md-0">
@@ -44,16 +43,16 @@ function mostrarProductos () {
     }
     printCards(data)
     for (const disco of discosJSON) {
-            document.querySelector(`#btn${disco.id}`).onclick= function() {
-                agregarAlCarrito(disco);
-            };
+        document.querySelector(`#btn${disco.id}`).onclick = function () {
+            agregarAlCarrito(disco);
+        };
     }
 }
 
 const printCards = data => {
     data.forEach(disco => {
         const {
-            id, 
+            id,
             img,
             nombre,
             artista,
@@ -115,7 +114,7 @@ const completarCarrito = () => {
         templateCarrito.querySelectorAll('td')[1].textContent = disc.cantidad
         templateCarrito.querySelector('.btn-success').dataset.id = disc.id
         templateCarrito.querySelector('.btn-danger').dataset.id = disc.id
-        
+
         const clone = templateCarrito.cloneNode(true)
         fragment.appendChild(clone)
     })
@@ -250,7 +249,7 @@ const formulario = document.getElementById("form")
 formulario.addEventListener("submit", validarFormulario)
 
 function validarFormulario(ev) {
-    if ((isNaN(campoNumber.value)) (campoNombre.value == "")) {
+    if ((isNaN(campoNumber.value))(campoNombre.value == "")) {
         ev.preventDefault()
         Swal.fire(
             'Debe ingresar datos válidos'

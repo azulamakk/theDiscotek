@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../JSCH/CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="icon" type="image/x-icon" href="img/icono.png">
     <title>Discotek</title>
 </head>
@@ -37,6 +37,8 @@
     </header>
     <h1 id="titulo">Discotek: Inicio</h1>
     <main id="productos">
+        <div id="discos">
+        </div>
         <template id="templateCard">
             <div class="col-12 mb-2 col-md-4">
                 <div class="card shadow mt-4 mt-md-0">
@@ -156,8 +158,7 @@
                                 </div>
                             </div>
                             <button id="button-form" type="submit"
-                                class="btn-lg btn-secondary fw-bold shrink text-white"
-                                style="background-color: rgb(105, 56, 105);">Enviar</button>
+                                class="btn-lg btn-secondary fw-bold shrink text-white">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -182,4 +183,5 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="index.js"></script>
+<script src="ajax.js"></script>
 </html>
