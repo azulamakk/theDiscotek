@@ -37,6 +37,20 @@
     </header>
     <h1 id="titulo">Discotek: Inicio</h1>
     <main id="productos">
+        <template id="templateCard">
+            <div class="col-12 mb-2 col-md-4">
+                <div class="card shadow mt-4 mt-md-0">
+                    <img src="" alt="tapaDisco" class="card-img-top"/>
+                    <div class="card-body">
+                        <p>Id</p>
+                        <h5>Nombre</h5>
+                        <h6>Artista</h6>
+                        <p><span>Género</span></p>
+                        <button class="btn btn-dark">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </template>
         <div id="tituloPrincipal" class="container">
             <h1 class="m-3 text-white-50">Todos los éxitos en vinilo</h1>
             <div class="row" id="cards"></div>
@@ -52,20 +66,6 @@
                 </td>
             </tr>
         </template>
-        <template id="templateCard">
-            <div class="col-12 mb-2 col-md-4">
-                <div id="card-color" class="card shadow mt-4 mt-md-0">
-                    <img src="" alt="" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="titulo">Nombre</h5>
-                        <h6 class="text-muted">Artista</h6>
-                        <p><span>Género</span></p>
-                        <button class="btn btn-dark">Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </template>
-
         <div id="tableCarrito" class="container table-responsive">
             <hr>
             <a>

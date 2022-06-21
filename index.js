@@ -8,6 +8,7 @@ const templateFooter = document.getElementById("templateFooter").content
 const templateCarrito = document.getElementById("templateCarrito").content
 const fragment = document.createDocumentFragment()
 let productosCarrito = {}
+let discosJSON=[]
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchData()
@@ -25,29 +26,27 @@ items.addEventListener("click", e => {
     btnAccion(e)
 })
 
-const fetchData = async () => {
-    try {
-        const URLGet = "discos.json"
-        fetch(URLGet)
-            .then(resultado => resultado.json())
-            .then(data =>{
-                let discos=data.discos;
-                console.log(discos);
-                discos.forEach(disco => {
-                    document.getElementById("discos").innerHTML+=
-                    `<tr>
-                        <td>${disco.id}</td>
-                        <td>${disco.img}</td>
-                        <td>${disco.nombre}</td>
-                        <td>${disco.artista}</td>
-                        <td>${disco.genero}</td>
-                    </tr>`
-                });
-            }
-        )
-        printCards(data)
-    } catch (error) {
-        console.log(error)
+function mostrarProductos () {
+    // La idea es que aparezcan los productos en el html
+    console.log (discosJSON);
+    for (const disco of discosJSON) {
+
+        document.querySelector("#contenedorCards").innerHTML += (`<div class="card shadow mt-4 mt-md-0">
+        <img src="${disco.img}" alt="tapaDisco" class="card-img-top" />
+            <div class="card-body">
+                <p>${disco.id}</p>
+                <h5>${disco.nombre}</h5>
+                <h6>${disco.artista}</h6>
+                <p><span>${disco.genero}</span></p>
+                <button class="btn btn-dark">Comprar</button>
+            </div>
+        </div>`);
+    }
+    printCards(data)
+    for (const disco of discosJSON) {
+            document.querySelector(`#btn${disco.id}`).onclick= function() {
+                agregarAlCarrito(disco);
+            };
     }
 }
 
