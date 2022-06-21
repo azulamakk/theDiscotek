@@ -14,7 +14,8 @@ function obtenerDatos(){
                         <td><img src="${disco.img}"></img></td>
                     </tr>
             });
-        })
+        }
+    )
 }
 obtenerDatos();
 

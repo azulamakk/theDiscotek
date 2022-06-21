@@ -27,8 +27,24 @@ items.addEventListener("click", e => {
 
 const fetchData = async () => {
     try {
-        const res = await fetch("/discos.json") //Fetch hace un llamado al archivo discos.json, el cual contiene la informacion del catalogo
-        const data = await res.json() // Contiene la info obtenida por fetch previamente
+        const URLGet = "discos.json"
+        fetch(URLGet)
+            .then(resultado => resultado.json())
+            .then(data =>{
+                let discos=data.discos;
+                console.log(discos);
+                discos.forEach(disco => {
+                    document.getElementById("discos").innerHTML+=
+                    `<tr>
+                        <td>${disco.id}</td>
+                        <td>${disco.img}</td>
+                        <td>${disco.nombre}</td>
+                        <td>${disco.artista}</td>
+                        <td>${disco.genero}</td>
+                    </tr>`
+                });
+            }
+        )
         printCards(data)
     } catch (error) {
         console.log(error)
@@ -187,3 +203,58 @@ const btnAccion = e => {
     e.stopPropagation()
 }
 
+// Seccion contacto
+const form = document.getElementById('form')
+form.addEventListener('submit', function (event) {
+
+    if (!email.validity.valid) {
+        showError();
+        event.preventDefault();
+    }
+});
+
+function showError() {
+    if (email.validity.valueMissing) {
+        emailError.textContent = 'No se ha introducido un correo electrónico';
+    } else if (email.validity.typeMismatch) {
+        emailError.textContent = 'El valor insertadi ni es valido';
+    } else if (email.validity.tooShort) {
+        emailError.textContent = `El correo electronico es muy corto. Reviselo antes de hacer el envío.`;
+    }
+
+    emailError.className = 'error activo';
+}
+const campoNombre = document.getElementById('nombre')
+const campoNumber = document.getElementById('telefono')
+
+campoNombre.oninput = () => {
+    if (!isNaN(campoNombre.value)) {
+        campoNombre.style.color = 'red'
+        Swal.fire({
+            title: 'ERROR',
+            text: 'Nombre invalido. Por favor intente nuevamente',
+            icon: 'error',
+            confirmButtonText: 'Gracias'
+        })
+    } else {
+        campoNombre.style.color = 'black'
+        Swal.fire({
+            title: 'Correcto',
+            text: 'Nombre válido!',
+            icon: 'success',
+            confirmButtonText: 'Gracias'
+        })
+    }
+}
+
+const formulario = document.getElementById("form")
+formulario.addEventListener("submit", validarFormulario)
+
+function validarFormulario(ev) {
+    if ((isNaN(campoNumber.value)) (campoNombre.value == "")) {
+        ev.preventDefault()
+        Swal.fire(
+            'Debe ingresar datos válidos'
+        )
+    }
+}
