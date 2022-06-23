@@ -1,0 +1,518 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Smooch+Sans:wght@300;600;800&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: auto;
+    line-height: 1.4em;
+    color: auto;
+    overflow: hidden;
+    overflow-y: scroll; 
+    text-decoration: none;
+    font-family: "Smooch Sans", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    background: #6B011B;
+    color: #fff;
+}
+
+.header__logo {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+#txtImg{
+    background-color: #f9e8df;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+#btnImg{
+    background-color: #ba8b72;
+    border-radius: 0%;
+    border-width: 0.5rem;
+    border-color: #6B011B;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2rem;
+    justify-content: center;
+    font-weight: 300;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+  
+.header__buscador {
+    display: flex;
+    height: 5rem;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #E8E0C5;
+    width: 100%;
+}
+
+.content-wrapper {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+    color: #6B011B;
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: 400;
+}
+
+#imgCarrito {
+    width: 35px;
+    height: 35px;
+}
+
+#btnCargaFinalizada {
+    color: rgb(14, 117, 14);
+    padding: 4rem;
+}
+
+body {
+    background-color: #f1e7c1;
+}
+
+.form-signin {
+    max-width: 25rem;
+    margin: auto;
+}
+
+.slider.round {
+    border-radius: 80px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+section {
+    text-align: center;
+}
+
+#nav {
+    background-color: #654533;
+    text-transform: uppercase;
+    font-size: 2rem;
+    position: sticky;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.navUlLiA {
+    list-style: none;
+    padding: 1rem;
+    font-size: 0;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+}
+
+.navUlLiA {
+    color: white;
+    font-size: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+a:hover {
+    font-weight: 900;
+    color: #eed35b;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+}
+
+.hamburguesa {
+    border-color: white;
+}
+
+#header {
+    grid-area: header;
+    width: 100%;
+    position: relative;
+}
+
+#imgLogo {
+    width: 5rem;
+    padding-top: 0.5rem;
+}
+
+#header{
+    width: 100%;
+    position: relative; 
+}
+
+footer {
+    background-color: #654533;
+    text-align: justify;
+    position: sticky;
+    height: 6.5rem;
+    padding-top: 2rem; 
+}
+
+label, p{
+    color: #291d16;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center; 
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+#txtJs{
+    color: #291d16;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center; 
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+#imgHeader{
+    display: flex;
+}
+
+.completar{
+    min-width: 300px; 
+    font-family: 'Quicksand', sans-serif;
+    color: #f9e8df;
+    background-color: #583e2e;
+    min-height: 2rem;
+    border-color: rgb(61, 110, 61);
+    border-width: 2px;
+    margin: 2rem;
+}
+
+::placeholder{
+    color: #f9e8df;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.btn-carrito-eliminar {
+    background: red;
+    color: #fff;
+    padding: 0.7rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+#vaciar-carrito,
+#comprar-carrito {
+    margin: 2rem;
+    background: green;
+    color: #fff;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+#vaciar-carrito {
+    margin: 2rem;
+    background: red;
+    color: #fff;
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+  
+.filter {
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+
+.vaciar-carrito {
+    text-align: center;
+    margin-top: 1rem;
+    background: #3c2b20;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-carrito {
+    height: 10rem;
+}
+
+.cantidad-tabla {
+    text-align: center;
+}
+
+.btn-tabla {
+    text-align: center;
+}
+
+.btn-carrito-agregar {
+    background: #583e2e;
+    color: #fff;
+    padding: 0.7rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+
+.carrito a {
+    margin: 1rem;
+    font-size: 3rem;
+    color: black;
+    padding-left: 1rem;
+}
+
+.carrito a:hover {
+    color: #583e2e;
+}
+  
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home img {
+    object-fit: cover;
+}
+
+.home .content {
+    position: absolute;
+}
+
+.home .content span {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    display: flex;
+}
+
+.home .content a {
+    font-size: 5rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    background: #583e2e;
+    color: #fff;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.home .content h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.home .content a:hover {
+    background: black;
+}
+  
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem 9%;
+}
+
+.productos-ind {
+    flex: 1 1 30rem;
+    text-align: center;
+    padding: 2rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.productos-ind img {
+    height: 20rem;
+}
+
+.productos-ind h3 {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.estrellas {
+    padding: 1rem 0.1rem;
+    font-size: 1.7rem;
+    color: #583e2e;
+}
+
+.precios {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: #333;
+    padding: 0.5rem;
+}
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.cantidad span {
+    padding: 0 0.7rem;
+    font-size: 1.7rem;
+}
+
+.cantidad input {
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: black;
+    padding: 0.5rem;
+    width: 5rem;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.productos-ind button {
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    background: #583e2e;
+    color: #fff;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    outline: 2px solid #583e2e;
+    outline-offset: 2px;
+}
+  
+.productos-ind button:hover {
+    background-color: black;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 5rem;
+    padding: 5rem;
+}
+
+.titulo span {
+    color: #583e2e;
+}
+  
+.carrito {
+    position: relative;
+}
+
+.carrito .table {
+    display: none;
+}
+
+.carrito-contador {
+    color: red;
+}
+  
+.header__nav:hover .table {
+    display: block;
+    position: absolute;
+    color: black;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 2rem;
+    margin: 1rem;
+}
+.header__buscador #buscador {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #333;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    text-transform: none;
+}
+
+.header__buscador label {
+    height: 100%;
+    width: 8rem;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    color: black;
+    background: var(--green);
+    text-align: center;
+    cursor: pointer;
+}
+
+.header__buscador label:hover {
+    background: black;
+    color: var(--green);
+}
+
+.header__nav {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}

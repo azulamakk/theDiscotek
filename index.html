@@ -5,167 +5,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="icon" type="image/x-icon" href="img/icono.png">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/icono.png">
     <title>Discotek</title>
 </head>
 
 <body>
     <header id="header">
         <div class="content-wrapper container">
-            <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+            <nav id="nav" class="header__logo  navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-                    <a href="index.html"><img src="img/logoDiscotek.png" alt="Logo Discotek" id="imgLogo"></a>
-                    <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation" id="hamburguesa">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end heightAuto" id="navbarNav">
-                        <div class="navbar-nav">
-                            <a class="nav-link active navUl navUlLi navUlLiA" aria-current="page"
-                                href="#index.html">Inicio</a>
-                            <a class="nav-link navUl navUlLi navUlLiA" href="#productos">Productos</a>
-                            <a class="nav-link navUl navUlLi navUlLiA" href="#nosotros">Nosotros</a>
-                            <a class="nav-link navUl navUlLi navUlLiA" href="#contacto">Contacto</a>
-                        </div>
+                    <a href="index.html"><img src="./assets/img/logoDiscotek.png" alt="Logo Discotek" id="imgLogo"></a>
+                    <form action="" class="header__buscador">
+                        <input type="search" name="search" id="buscador" placeholder="Buscar aquí..."
+                            autocomplete="off" />
+                        <label for="search" class="fas fa-search"></label>
+                    </form>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end heightAuto" id="navbarNav">
+                    <div class="navbar-nav">
+                        <a class="nav-link active navUl navUlLi navUlLiA" aria-current="page"
+                            href="#index.html">Inicio</a>
+                        <a class="nav-link navUl navUlLi navUlLiA" href="#productos">Productos</a>
+                        <a class="nav-link navUl navUlLi navUlLiA" href="#nosotros">Nosotros</a>
+                        <a class="nav-link navUl navUlLi navUlLiA" href="#contacto">Contacto</a>
                     </div>
                 </div>
             </nav>
+            <div class="carrito">
+                <a href="#" class="fas fa-shopping-cart icono animate__animated animate__heartBeat"></a>
+                <span class="carrito-contador"></span>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Acción</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="articulos-tabla"></tbody>
+                    <tfoot id="footer-tabla">
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
-        <img src="img/header.jpeg" id="imgHeader" alt="Disquera" class="img-fluid w-100">
     </header>
     <h1 id="titulo">Discotek: Inicio</h1>
-    <main id="productos">
-        <div id="discos">
-
+    <section class="home" id="home">
+        <div class="image">
+            <img src="./assets/img/header.jpeg" id="imgHeader" alt="Disquera" class="w-100" />
         </div>
-        <template id="templateCard">
-            <div class="col-12 mb-2 col-md-4">
-                <div class="card shadow mt-4 mt-md-0">
-                    <img src="" alt="tapaDisco" class="card-img-top"/>
-                    <div class="card-body">
-                        <p>Id</p>
-                        <h5>Nombre</h5>
-                        <h6>Artista</h6>
-                        <p><span>Género</span></p>
-                        <button class="btn btn-dark">Comprar</button>
-                    </div>
-                </div>
+        <div class="content">
+            <span id="txtImg">Todos los exitos en un mismo lugar</span>
+            <h3 id="btnImg"> <a href="#productos">Conocé mas</a></h3>
+        </div>
+    </section>
+    <section class="productos" id="productos">
+        <h2 class="titulo">Nuestros <span>productos</span></h1>
+            <div class="productos-contenedor">
             </div>
-        </template>
-        <div id="tituloPrincipal" class="container">
-            <h1 class="m-3 text-white-50">Todos los éxitos en vinilo</h1>
-            <div class="row" id="cards"></div>
-        </div>
-        <template id="templateCarrito">
-            <tr>
-                <th scope="row">id</th>
-                <td>Disco</td>
-                <td>1</td>
-                <td>
-                    <button class="btn btn-success btn-sm">+</button>
-                    <button class="btn btn-danger btn-sm">-</button>
-                </td>
-            </tr>
-        </template>
-        <div id="tableCarrito" class="container table-responsive">
-            <hr>
-            <a>
-                <h4 class="m-4"><img class="bi bi-envelope mr-3" src="img/carrito.png" id="imgCarrito"></img> Carrito de
-                    compras</h4>
-            </a>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Artista</th>
-                        <th scope="col">Género</th>
-                        <th scope="col">Cantidad</th>
-                    </tr>
-                </thead>
-                <tbody id="items" class="text-black"></tbody>
-                <tfoot>
-                    <tr id="footer">
-                        <th scope="row" colspan="5">
-                            Carrito vacío
-                        </th>
-                    </tr>
-                </tfoot>
-            </table>
-            <template id="templateFooter">
-                <th scope="row" colspan="2">Total productos</th>
-                <td>10</td>
-                <td>
-                    <button class="btn btn-danger btn-sm" id="vaciarCarrito">
-                        Vaciar carrito
-                    </button>
-                    <button class="btn btn-success btn-sm" id="finalizarCompra">
-                        Finalizar compra
-                    </button>
-                </td>
-                <td></td>
-                <td></td>
-                <td class="font-weight-bold">$ <span>5000</span></td>
+            <template class="template-productos">
+                <div class="productos-ind">
+                    <img src="" alt="">
+                    <h3></h3>
+                    <div class="precios">
+                        <span>$</span>
+                        <p class="precio"></p>
+                    </div>
+                    <div class="cantidad">
+                        <span>Cantidad:</span>
+                        <input type="number" min="1" max="1000" value="1" name="" id="" class="cantidad">
+                    </div>
+                    <button type="button" class="btn">Añadir</button>
+                </div>
             </template>
-        </div>
-        <section id="nosotros">
-            <div class="container">
-                <div class="row g-4 my-5 d-flex justify-content-center align-content-center align-items-center">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center shadow mt-4 mt-md-0">
-                        <h2 class="text-white-50">¿Qué nos motiva?</h2>
-                        <p class="text-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Incidunt odio error perferendis, id omnis blanditiis vitae
-                            ducimus rerum enim ex! Repellat maxime veniam repellendus
-                            voluptatum pariatur animi quo eligendi molestias. Harum ut
-                            recusandae neque, similique excepturi alias ratione sed nesciunt
-                            delectus? Illo, reprehenderit qui. Esse suscipit fugit hic
-                            quibusdam in laudantium, quaerat perferendis laboriosam ad vel
-                            ea totam, dolor vitae..
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contacto">
-            <form id="form">
-                <div class="container mt-5">
-                    <h1 class="card-title py-3 text-center text-white-50">Contactanos!</h1>
-                    <div class="card mb-3 color-card-form">
-                        <div class="card-body">
-                            <div>
-                                <div>
-                                    <label for="exampleFormControlInput1 mail" class="form-label">Ingresa tu
-                                        email</label>
-                                    <input id="email" type="email" class="completar" id="email" aria-required="true"
-                                        placeholder="xxxx@example.com">
-                                </div>
-                                <div>
-                                    <label for="exampleFormControlInput2" class="form-label">Nombre</label>
-                                    <input id="nombre" type="text" class="completar" placeholder="Nombre"
-                                        aria-required="true">
-                                </div>
-                                <div>
-                                    <label for="exampleFormControlInput3" class="form-label">Teléfono</label>
-                                    <input id="telefono" type="text" class="completar" aria-required="true"
-                                        placeholder="+54 x xx xxxx-xxxx">
-                                </div>
-                                <div>
-                                    <label for="exampleFormControlTextarea1" class="form-label color-text">Deje aqui su
-                                        consulta</label>
-                                    <textarea class="completar" placeholder="Escribe aqui" id="consulta"></textarea>
-                                </div>
-                            </div>
-                            <button id="button-form" type="submit"
-                                class="btn-lg btn-secondary fw-bold shrink text-white">Enviar</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </section>
-    </main>
+
+            <template class="template-footer">
+                <tr>
+                    <td colspan="2">
+                        Total productos
+                    </td>
+                    <td colspan="2"></td>
+                    <td>$<span></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="comprar-carrito" class="realizar">
+                            Comprar
+                        </button>
+                    </td>
+                    <td colspan="2">
+                        <button id="vaciar-carrito">
+                            Vaciar
+                        </button>
+                    </td>
+                </tr>
+            </template>
+
+            <template class="template-carrito">
+                <tr>
+                    <td><img src="" alt="" class="img-carrito"></td>
+                    <td></td>
+                    <td class="cantidad-tabla"></td>
+                    <td class="btn-tabla">
+                        <button class="btn-carrito-agregar">
+                            +
+                        </button>
+                        <button class="btn-carrito-eliminar">
+                            -
+                        </button>
+                    </td>
+                    <td colspan="2">$<span></span></td>
+                </tr>
+            </template>
+    </section>
 </body>
 <footer>
     <div class="container p-4">
@@ -178,11 +134,15 @@
         </div>
     </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
 </script>
+<!--Sweet Alert-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="index.js"></script>
-<script src="ajax.js"></script>
+<!--Animaciones-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<script src="./src/index.js"></script>
+
 </html>

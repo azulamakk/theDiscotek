@@ -1,0 +1,161 @@
+[{
+    "id": 1,
+    "nombre": "Brothers In Arms",
+    "artista": "Dire Traits",
+    "img": "./assets/img/tapasDiscos/brothersInArms.jpg",
+    "precio": 100,
+    "cantidad": 0
+},
+{
+    "id": 2,
+    "nombre": "Hysteria",
+    "artista": "Def Leppard",
+    "img": "./assets/img/tapasDiscos/hysteria.jpg",
+    "precio": 100,
+    "cantidad": 0
+},
+{
+    "id": 3,
+    "nombre": "The Queen Is Dead",
+    "artista": "The Smiths",
+    "img": "./assets/img/tapasDiscos/theQueenIsDead.jpg",
+    "precio": 200,
+    "cantidad": 0
+},
+{
+    "id": 4,
+    "nombre": "Crowned House",
+    "artista": "Crowned House",
+    "img": "./assets/img/tapasDiscos/crownedHouse.jpg",
+    "precio": 200,
+    "cantidad": 0
+},
+{
+    "id": 5,
+    "nombre": "Graceland",
+    "artista": "Paul Simon",
+    "img": "./assets/img/tapasDiscos/graceland.jpg",
+    "precio": 250,
+    "cantidad": 0
+},
+{
+    "id": 6,
+    "nombre": "1984",
+    "artista": "Van Halen",
+    "img": "./assets/img/tapasDiscos/1984.jpg",
+    "precio": 150,
+    "cantidad": 0
+},
+{
+    "id": 7,
+    "nombre": "Paul's Boutique",
+    "artista": "Beastie Boys",
+    "img": "./assets/img/tapasDiscos/paulsBoutique.jpg",
+    "precio": 100,
+    "cantidad": 0
+},
+{
+    "id": 8,
+    "nombre": "Remain in Light",
+    "artista": "Talking Heads",
+    "img": "./assets/img/tapasDiscos/remainInLight.jpg",
+    "precio": 300,
+    "cantidad": 0
+},
+{
+    "id": 9,
+    "nombre": "The Joshua Tree",
+    "artista": "U2",
+    "img": "./assets/img/tapasDiscos/theJoshuaTree.jpg",
+    "precio": 250,
+    "cantidad": 0
+},
+{
+    "id": 10,
+    "nombre": "Murmur",
+    "artista": "R.E.M.",
+    "img": "./assets/img/tapasDiscos/murmur.jpg",
+    "precio": 400,
+    "cantidad": 0
+},
+{
+    "id": 11,
+    "nombre": "...And Justice For All",
+    "artista": "Metallica",
+    "img": "./assets/img/tapasDiscos/andJusticeForAll.jpg",
+    "precio": 125,
+    "cantidad": 0
+},
+{
+    "id": 12,
+    "nombre": "Surfer Rosa",
+    "artista": "The Pixies",
+    "img": "./assets/img/tapasDiscos/surferRosa.jpg",
+    "precio": 250,
+    "cantidad": 0
+},
+{
+    "id": 13,
+    "nombre": "Synchronicity",
+    "artista": "The Police",
+    "img": "./assets/img/tapasDiscos/sinchronicity.jpg",
+    "precio": 100,
+    "cantidad": 0
+},
+{
+    "id": 14,
+    "nombre": "Purple Rain",
+    "artista": "Prince and the Revolution",
+    "img": "./assets/img/tapasDiscos/purpleRain.jpg",
+    "precio": 300,
+    "cantidad": 0
+},
+{
+    "id": 15,
+    "nombre": "Tattoo You",
+    "artista": "The rolling stones",
+    "img": "./assets/img/tapasDiscos/tattooYou.jpg",
+    "precio": 175,
+    "cantidad": 0
+},
+{
+    "id": 16,
+    "nombre": "Born in the U.S.A.",
+    "artista": "Bruce Springsteen",
+    "img": "./assets/img/tapasDiscos/bornInTheUSA.jpg",
+    "precio": 200,
+    "cantidad": 0
+},
+{
+    "id": 17,
+    "nombre": "Back In Black",
+    "artista": "AC/CV",
+    "img": "./assets/img/tapasDiscos/backInBlack.jpg",
+    "precio": 200,
+    "cantidad": 0
+},
+{
+    "id": 18,
+    "nombre": "London Calling",
+    "artista": "The Clash",
+    "img": "./assets/img/tapasDiscos/londonCalling.jpg",
+    "precio": 300,
+    "cantidad": 0
+},
+{
+    "id": 19,
+    "nombre": "Thriller",
+    "artista": "Michael Jackson",
+    "img": "",
+    "precio": 350,
+    "cantidad": 0
+},
+{
+    "id": 20,
+    "nombre": "Appetite For Destruction",
+    "artista": "Guns N' Roses",
+    "img": "./assets/img/tapasDiscos/appetiteForDestruction.jpg",
+    "precio": 250,
+    "cantidad": 0
+}
+]
