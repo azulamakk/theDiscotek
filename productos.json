@@ -26,7 +26,7 @@
     "id": 4,
     "nombre": "Crowned House",
     "artista": "Crowned House",
-    "img": "./assets/img/tapasDiscos/crownedHouse.jpg",
+    "img": "./assets/img/tapasDiscos/crownedHouse.jpeg",
     "precio": 200,
     "cantidad": 0
 },
@@ -98,7 +98,7 @@
     "id": 13,
     "nombre": "Synchronicity",
     "artista": "The Police",
-    "img": "./assets/img/tapasDiscos/sinchronicity.jpg",
+    "img": "./assets/img/tapasDiscos/synchronicity.jpg",
     "precio": 100,
     "cantidad": 0
 },
@@ -146,7 +146,7 @@
     "id": 19,
     "nombre": "Thriller",
     "artista": "Michael Jackson",
-    "img": "",
+    "img": "./assets/img/tapasDiscos/thriller.jpg",
     "precio": 350,
     "cantidad": 0
 },

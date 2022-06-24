@@ -441,10 +441,13 @@ label, p{
     background-color: black;
 }
 
-.titulo {
+#titulo {
     text-align: center;
-    font-size: 5rem;
-    padding: 5rem;
+    font-size: 8rem;
+    font-weight: 700;
+    justify-content: center;
+    display: flex;
+    width: 100%;
 }
 
 .titulo span {
@@ -471,13 +474,11 @@ label, p{
     top: 100%;
     background-color: #fff;
     z-index: 1000;
-    padding: 2rem;
-    margin: 1rem;
 }
+
 .header__buscador #buscador {
     height: 100%;
     width: 100%;
-    padding: 1rem;
     font-size: 2rem;
     color: #333;
     border: 0.1rem solid rgba(0, 0, 0, 0.3);
@@ -490,23 +491,23 @@ label, p{
     font-size: 2.5rem;
     line-height: 5rem;
     color: black;
-    background: var(--green);
+    background: #583e2e;
     text-align: center;
     cursor: pointer;
 }
 
 .header__buscador label:hover {
     background: black;
-    color: var(--green);
+    color: #583e2e;
 }
 
 .header__nav {
     background: #fff;
     display: flex;
     align-items: center;
+    color: #3c2b20;
     justify-content: space-between;
     padding: 2rem 9%;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 header {

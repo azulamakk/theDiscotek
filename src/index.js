@@ -1,7 +1,6 @@
-//WINDOW ONSCROLL- PARA HEADER FIJO.
+
 const $header = document.querySelector(".header__nav");
 
-//Main Js
 const $contenedorProductos = document.querySelector(".productos-contenedor");
 const $fragment = document.createDocumentFragment();
 const $template = document.querySelector(".template-productos").content;
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   llamarProductos();
 });
 
-//Fetch
 const llamarProductos = () => {
   fetch("./productos.json")
     .then((res) => res.json())
