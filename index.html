@@ -13,16 +13,11 @@
 <body>
     <header id="header">
         <div class="content-wrapper container">
-            <nav id="nav" class="header__logo  navbar navbar-expand-lg navbar-light">
+            <nav id="nav" class="header__logo  navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a href="index.html"><img src="./assets/img/logoDiscotek.png" alt="Logo Discotek" id="imgLogo"></a>
-                    <form action="" class="header__buscador">
-                        <input type="search" name="search" id="buscador" placeholder="Buscar aquí..."
-                            autocomplete="off" />
-                        <label for="search" class="fas fa-search"></label>
-                    </form>
                 </div>
-                <div class="collapse navbar-collapse justify-content-end heightAuto" id="navbarNav">
+                <div class="collapse navbar-collapse heightAuto" id="navbarNav">
                     <div class="navbar-nav">
                         <a class="nav-link active navUl navUlLi navUlLiA" aria-current="page"
                             href="#index.html">Inicio</a>
@@ -31,40 +26,39 @@
                         <a class="nav-link navUl navUlLi navUlLiA" href="#contacto">Contacto</a>
                     </div>
                 </div>
-            </nav>
-            <div class="carrito">
-                <a href="./assets/img/carrito.png" class="fas fa-shopping-cart icono animate__animated animate__heartBeat"></a>
-                <span class="carrito-contador"></span>
-                <table class="table">
-                    <thead>
+                <div class="carrito">
+                    <a href="#" src="./assets/img/carrito.png" class="fas fa-shopping-cart icono carrito"></a>
+                    <span class="carrito-contador"></span>
+                    <table class="table">
+                      <thead>
                         <tr>
-                            <th scope="col">Imagen</th>
-                            <th scope="col">Item</th>
-                            <th scope="col">Cantidad</th>
-                            <th scope="col">Acción</th>
-                            <th scope="col">Total</th>
+                          <th scope="col">Imagen</th>
+                          <th scope="col">Item</th>
+                          <th scope="col">Cantidad</th>
+                          <th scope="col">Acción</th>
+                          <th scope="col">Total</th>
                         </tr>
-                    </thead>
-                    <tbody id="articulos-tabla"></tbody>
-                    <tfoot id="footer-tabla">
+                      </thead>
+                      <tbody id="articulos-tabla"></tbody>
+                      <tfoot id="footer-tabla">
                         </tr>
-                    </tfoot>
-                </table>
-            </div>
+                      </tfoot>
+                    </table>
+                  </div>
+            </nav>
         </div>
     </header>
     <h1 id="titulo">The Discotek: Inicio</h1>
     <section class="home" id="home">
         <div class="image">
-            <img src="./assets/img/header.jpeg" id="imgHeader" alt="Disquera"/>
+            <img src="./assets/img/header.jpeg" id="imgHeader" alt="Disquera" />
         </div>
         <div class="content">
             <span id="txtImg">Todos los exitos en un mismo lugar</span>
-            <h3 id="btnImg"> <a href="#productos">Conocé mas</a></h3>
         </div>
     </section>
     <section class="productos" id="productos">
-        <h2 class="titulo">Nuestros <span>productos</span></h1>
+        <h2 class="titulosIntermedios">Nuestros <span>productos</span></h1>
             <div class="productos-contenedor">
             </div>
             <template class="template-productos">
@@ -122,10 +116,65 @@
                 </tr>
             </template>
     </section>
+    <section id="nosotros">
+        <div class="container">
+            <div class="row g-4 my-5 d-flex justify-content-center align-content-center align-items-center">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 text-center shadow mt-4 mt-md-0">
+                    <h2 class="titulosIntermedios">¿Qué nos motiva?</h2>
+                    <p class="nosotros text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Incidunt odio error perferendis, id omnis blanditiis vitae
+                        ducimus rerum enim ex! Repellat maxime veniam repellendus
+                        voluptatum pariatur animi quo eligendi molestias. Harum ut
+                        recusandae neque, similique excepturi alias ratione sed nesciunt
+                        delectus? Illo, reprehenderit qui. Esse suscipit fugit hic
+                        quibusdam in laudantium, quaerat perferendis laboriosam ad vel
+                        ea totam, dolor vitae..
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto">
+        <form id="form">
+            <div class="container mt-5">
+                <h1 class="titulosIntermedios">Contactanos!</h1>
+                <div class="card-body">
+                    <div>
+                        <label for="email" class="labels">Ingresa tu email</label>
+                        <br>
+                        <input id="email" type="email" class="inputContacto" id="email" aria-required="true"
+                            placeholder="xxxx@example.com">
+                    </div>
+                    <div>
+                        <label for="nombre" class="labels">Nombre</label>
+                        <br>
+                        <input id="nombre" type="text" class="inputContacto" id="nombre" placeholder="Nombre"
+                            aria-required="true">
+                    </div>
+                    <div>
+                        <label for="telefono" class="labels">Teléfono</label>
+                        <br>
+                        <input id="number" type="number" class="inputContacto" id="telefono" aria-required="true"
+                            placeholder="+54 x xx xxxx-xxxx">
+                    </div>
+                    <div id="message" class="mb-3">
+                        <label for="mensaje" class="labels">Mensaje</label>
+                        <br>
+                        <textarea class="inputMensaje inputContacto" id="mensaje"
+                            placeholder="Deja tu mensaje aca"></textarea>
+                    </div>
+                    <div>
+                        <button id="button-form" type="submit" class="btnEnviar">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
 </body>
 <footer>
-    <div class="container p-4">
-        <div class="row g-4 d-flex justify-content-between align-content-between">
+    <div>
+        <div class="g-4 d-flex justify-content-between align-content-between">
             <div class="col-12 col-sm-6 col-md-6 p-3">
                 <p> The Discotek Store</p>
                 <p> Buenos Aires, Argentina</p>
@@ -134,14 +183,12 @@
         </div>
     </div>
 </footer>
-
+<!--Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
 </script>
 <!--Sweet Alert-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<!--Animaciones-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 <script src="./src/index.js"></script>
 

@@ -14,8 +14,63 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: all 0.2s linear;
+}
+
+.labels{
+    font-size: 2rem;
+    line-height: 3.5rem;
+    height: fit-content;
+    color: #583e2e;
+    margin: 3rem;
+    margin-top: 6rem;
+}
+
+.inputMensaje{
+    min-height: 10rem;
+}
+
+.carrito{
+    width: 20rem;
+}
+
+.btnEnviar{
+    margin: 3rem;
+    width: 10rem;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 3rem;
+    background-color: rgb(31, 107, 31);
+    color: #E8E0C5;
+    height: 5rem;
+    border-radius: 5%;
+    border-width: 1rem;
+    border-color: #583e2e;
+}
+
+.inputContacto{
+    background-color: #ba8b72;
+    color: #291d16;
+    font-size: 2rem;
+    width: 70%;
+    justify-content: center;
+    font-family: "Quicksand", sans-serif;
+    height: 4rem;
+    overflow-y: scroll;
+    text-align: center;
+    font-weight: 400;
+}
+
+.nosotros{
+    font-size: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    justify-content: center;
+    font-family: "Quicksand", sans-serif;
+    height: fit-content;
+    margin-bottom: 3rem;
+    overflow-y: visible;
+    line-height: 3.5rem;
 }
 
 html {
@@ -41,19 +96,6 @@ html {
     background-color: #f9e8df;
     font-weight: 700;
     font-size: 4rem;
-}
-
-#btnImg{
-    background-color: #ba8b72;
-    border-radius: 0%;
-    border-width: 0.5rem;
-    border-color: #6B011B;
-    width: fit-content;
-    height: fit-content;
-    font-size: 2rem;
-    justify-content: center;
-    font-weight: 300;
-    display: flex;
 }
 
 .logo {
@@ -89,11 +131,6 @@ h1 {
     font-weight: 400;
 }
 
-#imgCarrito {
-    width: 35px;
-    height: 35px;
-}
-
 #btnCargaFinalizada {
     color: rgb(14, 117, 14);
     padding: 4rem;
@@ -118,6 +155,17 @@ body {
 
 section {
     text-align: center;
+}
+
+.titulosIntermedios{
+    margin: 2rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #291d16;
+}
+
+.sticky{
+    position: static;
 }
 
 #nav {
@@ -185,7 +233,6 @@ footer {
     background-color: #654533;
     text-align: justify;
     position: sticky;
-    height: 6.5rem;
     padding-top: 2rem; 
 }
 
@@ -227,6 +274,9 @@ label, p{
     font-family: 'Quicksand', sans-serif;
 }
 
+.carrito{
+    width: 20rem;
+}
 
 .btn-carrito-eliminar {
     background: red;
