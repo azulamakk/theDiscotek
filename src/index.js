@@ -11,7 +11,6 @@ const $templateCarrito = document.querySelector(".template-carrito").content;
 const $items = document.querySelector("#articulos-tabla");
 const $footer = document.querySelector("#footer-tabla");
 const $carritoContador = document.querySelector(".carrito-contador");
-const $buscador = document.querySelector("#buscador");
 
 
 let carritoDeCompra = JSON.parse(localStorage.getItem("carrito")) || {};

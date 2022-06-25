@@ -81,11 +81,9 @@ html {
 }
 
 .header__logo {
-    background: #eee;
-    display: flex;
+    background: #583e2e;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 9%;
 }
 
 #txtImg{
@@ -97,7 +95,7 @@ html {
 .logo {
     display: flex;
     align-items: center;
-    color: black;
+    color: #f1e7c1;
     font-weight: bolder;
     font-size: 3rem;
 }
@@ -207,12 +205,6 @@ a:hover {
 
 .hamburguesa {
     border-color: white;
-}
-
-#header {
-    grid-area: header;
-    width: 100%;
-    position: relative;
 }
 
 #imgLogo {
