@@ -7,7 +7,6 @@
     font-size: auto;
     line-height: 1.4em;
     color: auto;
-    overflow: hidden;
     overflow-y: scroll; 
     text-decoration: none;
     font-family: "Smooch Sans", sans-serif;
@@ -99,11 +98,6 @@ html {
     font-weight: bolder;
     font-size: 3rem;
 }
-  
-.header__buscador {
-    display: flex;
-    height: 5rem;
-}
 
 body {
     padding: 0;
@@ -128,10 +122,6 @@ h1 {
 #btnCargaFinalizada {
     color: rgb(14, 117, 14);
     padding: 4rem;
-}
-
-body {
-    background-color: #f1e7c1;
 }
 
 .form-signin {
@@ -327,7 +317,7 @@ label, p{
 }
 
 .btn-carrito-agregar {
-    background: #583e2e;
+    background: green;
     color: #fff;
     padding: 0.7rem;
     font-size: 2rem;
@@ -345,6 +335,7 @@ label, p{
 
 .carrito a:hover {
     color: #583e2e;
+    position: static;
 }
   
 .home {
@@ -483,7 +474,6 @@ label, p{
     display: flex;
     width: 100%;
 }
-
 .titulo span {
     color: #583e2e;
 }
@@ -492,55 +482,27 @@ label, p{
     position: relative;
 }
 
-.carrito .table {
-    display: none;
-}
-
 .carrito-contador {
-    color: red;
+    color: #f9e8df;
 }
   
 .header__nav:hover .table {
-    display: block;
-    position: absolute;
-    color: black;
+    font-size: 2rem;
+    color: #E8E0C5;
     right: 0;
     top: 100%;
-    background-color: #fff;
-    z-index: 1000;
-}
-
-.header__buscador #buscador {
-    height: 100%;
-    width: 100%;
-    font-size: 2rem;
-    color: #333;
-    border: 0.1rem solid rgba(0, 0, 0, 0.3);
-    text-transform: none;
-}
-
-.header__buscador label {
-    height: 100%;
-    width: 8rem;
-    font-size: 2.5rem;
-    line-height: 5rem;
-    color: black;
-    background: #583e2e;
-    text-align: center;
-    cursor: pointer;
-}
-
-.header__buscador label:hover {
-    background: black;
-    color: #583e2e;
+    background-color: #583e2e;
 }
 
 .header__nav {
     background: #654533;
     display: flex;
     align-items: center;
-    color: #3c2b20;
+    color: #E8E0C5;
     justify-content: space-between;
+    font-size: 2rem;
+    position: static;
+    overflow-y: scroll;
 }
 
 header {

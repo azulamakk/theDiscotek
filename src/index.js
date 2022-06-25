@@ -99,7 +99,7 @@ const renderizarFooter = () => {
   $footer.innerHTML = "";
   if (Object.keys(carritoDeCompra).length === 0) {
     $footer.innerHTML = `
-            <th scope="row" colspan="5">Personalizate</th>
+            <th scope="row" colspan="5">.</th>
             `;
     return;
   }
@@ -124,9 +124,9 @@ const renderizarFooter = () => {
 
   const $btnComprar = document.querySelector(".realizar");
   $btnComprar.addEventListener('click', (e) => {
-    const okCompra = confirm("Confirma Compra?");
+    const okCompra = confirm("¿Esta seguro que desea finalizar su compra?");
     if (okCompra) {
-      swal("Muchas gracias", "por tu compra!", "success");
+      swal("Muchas gracias", "Te esperamos con los mejores exitos", "success");
       vaciarCarrito();
     }
   });
@@ -156,16 +156,13 @@ const btnAumentarOdisminuir = (e) => {
   e.stopPropagation();
 };
 
-window.onscroll = function() {elementoSticky()};
-var header = document.getElementById("header");
-var sticky = header.offsetTop;
-function elementoSticky() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+window.onscroll = () => {
+  if (window.scrollY > 100) {
+    $header.classList.add("active");
   } else {
-    header.classList.remove("sticky");
+    $header.classList.remove("active");
   }
-}
+};
 
 //El siguiente codigo apunta a poder validar correctamente los datos ingresados en la seccion contacto
 
