@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="icon" type="image/x-icon" href="./assets/img/icono.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Discotek</title>
 </head>
 
@@ -26,31 +27,31 @@
                         <a class="nav-link navUl navUlLi navUlLiA" href="#contacto">Contacto</a>
                     </div>
                 </div>
-                <div class="carrito">
-                    <a href="#" src="./assets/img/carrito.png" class="fas fa-shopping-cart icono carrito"></a>
-                    <span class="carrito-contador"></span>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col">Imagen</th>
-                          <th scope="col">Item</th>
-                          <th scope="col">Cantidad</th>
-                          <th scope="col">Acción</th>
-                          <th scope="col">Total</th>
-                        </tr>
-                      </thead>
-                      <tbody id="articulos-tabla"></tbody>
-                      <tfoot id="footer-tabla">
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
             </nav>
+            <div class="carrito">
+                <a href="#" class="fas fa-shopping-cart icono animate__animated animate__heartBeat"></a>
+                <span class="carrito-contador"></span>
+                <table border class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Acción</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="articulos-tabla"></tbody>
+                    <tfoot id="footer-tabla">
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </header>
     <h1 id="titulo">The Discotek: Inicio</h1>
     <section class="home" id="home">
-        <div class="image">
+        <div>
             <img src="./assets/img/header.jpeg" id="imgHeader" alt="Disquera" />
         </div>
         <div class="content">
@@ -58,63 +59,63 @@
         </div>
     </section>
     <section class="productos" id="productos">
-        <h2 class="titulosIntermedios">Nuestros <span>productos</span></h1>
-            <div class="productos-contenedor">
-            </div>
-            <template class="template-productos">
-                <div class="productos-ind">
-                    <img src="" alt="">
-                    <h3></h3>
-                    <div class="precios">
-                        <span>$</span>
-                        <p class="precio"></p>
-                    </div>
-                    <div class="cantidad">
-                        <span>Cantidad:</span>
-                        <input type="number" min="1" max="1000" value="1" name="" id="" class="cantidad">
-                    </div>
-                    <button type="button" class="btn">Añadir</button>
+        <h2 class="titulosIntermedios">Nuestros <span>productos</span></h2>
+        <div class="productos-contenedor">
+        </div>
+        <template class="template-productos">
+            <div class="productos-ind">
+                <img src="" alt="">
+                <h3></h3>
+                <div class="precios">
+                    <span>$</span>
+                    <p class="precio"></p>
                 </div>
-            </template>
+                <div class="cantidad">
+                    <span>Cantidad:</span>
+                    <input type="number" min="1" max="1000" value="1" name="" id="" class="cantidad">
+                </div>
+                <button type="button" class="btn">Añadir</button>
+            </div>
+        </template>
 
-            <template class="template-footer">
-                <tr>
-                    <td colspan="2">
-                        Total productos
-                    </td>
-                    <td colspan="2"></td>
-                    <td>$<span></span></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button id="comprar-carrito" class="realizar">
-                            Comprar
-                        </button>
-                    </td>
-                    <td colspan="2">
-                        <button id="vaciar-carrito">
-                            Vaciar
-                        </button>
-                    </td>
-                </tr>
-            </template>
+        <template class="template-footer">
+            <tr>
+                <td colspan="2">
+                    Total productos
+                </td>
+                <td colspan="2"></td>
+                <td>$<span></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button id="comprar-carrito" class="realizar">
+                        Comprar
+                    </button>
+                </td>
+                <td colspan="2">
+                    <button id="vaciar-carrito">
+                        Vaciar
+                    </button>
+                </td>
+            </tr>
+        </template>
 
-            <template class="template-carrito">
-                <tr>
-                    <td><img src="" alt="" class="img-carrito"></td>
-                    <td></td>
-                    <td class="cantidad-tabla"></td>
-                    <td class="btn-tabla">
-                        <button class="btn-carrito-agregar">
-                            +
-                        </button>
-                        <button class="btn-carrito-eliminar">
-                            -
-                        </button>
-                    </td>
-                    <td colspan="2">$<span></span></td>
-                </tr>
-            </template>
+        <template class="template-carrito">
+            <tr>
+                <td><img src="" alt="" class="img-carrito"></td>
+                <td></td>
+                <td class="cantidad-tabla"></td>
+                <td class="btn-tabla">
+                    <button class="btn-carrito-agregar">
+                        +
+                    </button>
+                    <button class="btn-carrito-eliminar">
+                        -
+                    </button>
+                </td>
+                <td colspan="2">$<span></span></td>
+            </tr>
+        </template>
     </section>
     <section id="nosotros">
         <div class="container">

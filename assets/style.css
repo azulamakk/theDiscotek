@@ -30,10 +30,6 @@
     min-height: 10rem;
 }
 
-.carrito{
-    width: 20rem;
-}
-
 .btnEnviar{
     margin: 3rem;
     width: 10rem;
@@ -272,10 +268,6 @@ label, p{
 ::placeholder{
     color: #f9e8df;
     font-family: 'Quicksand', sans-serif;
-}
-
-.carrito{
-    width: 20rem;
 }
 
 .btn-carrito-eliminar {
@@ -552,12 +544,11 @@ label, p{
 }
 
 .header__nav {
-    background: #fff;
+    background: #654533;
     display: flex;
     align-items: center;
     color: #3c2b20;
     justify-content: space-between;
-    padding: 2rem 9%;
 }
 
 header {
