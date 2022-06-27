@@ -333,10 +333,6 @@ label, p{
     padding-left: 1rem;
 }
 
-.carrito a:hover {
-    color: #583e2e;
-    position: static;
-}
   
 .home {
     display: flex;
@@ -384,7 +380,16 @@ label, p{
 .home .content a:hover {
     background: black;
 }
-  
+
+#table{
+    display: hidden;
+    width: fit-content;
+}
+
+#table:hover{
+    visibility: visible;
+}
+
 .productos-contenedor {
     display: flex;
     flex-wrap: wrap;
@@ -474,6 +479,7 @@ label, p{
     display: flex;
     width: 100%;
 }
+
 .titulo span {
     color: #583e2e;
 }
@@ -485,13 +491,16 @@ label, p{
 .carrito-contador {
     color: #f9e8df;
 }
-  
+
 .header__nav:hover .table {
     font-size: 2rem;
     color: #E8E0C5;
-    right: 0;
-    top: 100%;
     background-color: #583e2e;
+    width: fit-content;
+}
+
+.navbar{
+    max-height: 10rem;
 }
 
 .header__nav {

@@ -7,27 +7,17 @@ const $contenedorProductos = document.querySelector(".productos-contenedor");
 const $fragment = document.createDocumentFragment();
 const $template = document.querySelector(".template-productos").content;
 const $templateFooter = document.querySelector(".template-footer").content;
+const $btnCarrito = document.getElementById("carrito")
 const $templateCarrito = document.querySelector(".template-carrito").content;
+const $carritoContador = document.querySelector(".carrito-contador");
 const $items = document.querySelector("#articulos-tabla");
 const $footer = document.querySelector("#footer-tabla");
-const $carritoContador = document.querySelector(".carrito-contador");
-
 
 let carritoDeCompra = JSON.parse(localStorage.getItem("carrito")) || {};
 
 document.addEventListener("DOMContentLoaded", () => {
   llamarProductos();
 });
-
-//Carga de productos. Fetch a los datos cagados en productos.json
-const llamarProductos = () => {
-  fetch("./productos.json")
-    .then((res) => res.json())
-    .then((productos) => cargarProductos(productos))
-    .catch((err) => {
-      console.log(`Error ${err}`);
-    });   
-};
 
 //Carga de productos en cards
 const cargarProductos = (productos) => {
@@ -41,6 +31,16 @@ const cargarProductos = (productos) => {
     $fragment.appendChild(clon);
   });
   $contenedorProductos.appendChild($fragment);
+};
+
+//Carga de productos. Fetch a los datos cagados en productos.json
+const llamarProductos = () => {
+  fetch("./productos.json")
+    .then((res) => res.json())
+    .then((productos) => cargarProductos(productos))
+    .catch((err) => {
+      console.log(`Error ${err}`);
+    });   
 };
 
 //Boton de añadir al carrito
@@ -143,6 +143,7 @@ $items.addEventListener('click', (e) => {
   btnAumentarOdisminuir(e);
 });
 
+
 //Aumento o disnucion de porductos una vez en el carrito
 const btnAumentarOdisminuir = (e) => {
   const articulo = carritoDeCompra[e.target.dataset.id];
@@ -164,6 +165,7 @@ window.onscroll = () => {
   }
 };
 
+
 //El siguiente codigo apunta a poder validar correctamente los datos ingresados en la seccion contacto
 
 //Linkeando con el DOM
@@ -179,6 +181,7 @@ form.addEventListener('submit', function (event) {
     }
 });
 
+// Validacion de datos ingresados
 function showError() {
     if (email.validity.valueMissing) {
         emailError.textContent = 'No se ha introducido un correo electrónico';
